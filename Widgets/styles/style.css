@@ -1,0 +1,58 @@
+.clock {
+  display: inline-block;
+  background-image: url("./images/cookie.jpg");
+  background-position: center;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 3px 3px black;
+  padding: 26px 21px 26px 21px;
+}
+
+.tabs {
+  position: relative;
+  top: 50px;
+  color: white;
+  width: 250px;
+}
+
+.header {
+  width: 272px;
+  height: 30.5px;
+}
+
+.header li:first-child {
+  background-color: darkgrey;
+  border-bottom-color: darkgrey;
+}
+
+.header li {
+  background-color: dimgrey;
+  display: table-cell;
+  text-align: center;
+  float: left;
+  width: 78.5px;
+  border: 1px solid green;
+  padding: 5px;
+}
+
+
+
+.currentContent {
+  position: relative;
+  left: 40px;
+}
+
+.currentContent img {
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+  background-color: darkgrey;
+  border: 1px solid green;
+  border-top-color: darkgrey;
+}
+
+body {
+  background-color: black;
+}

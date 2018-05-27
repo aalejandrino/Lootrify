@@ -19,15 +19,26 @@ class Clock extends React.Component {
     let pm = " PM"
     let checkAmPm = this.state.date.getHours() >= 12 ? pm : am;
 
+    let month = this.state.date.getMonth() + 1;
+    let day = this.state.date.getDate();
+    let year = this.state.date.getFullYear();
+
     return (
-      <div>
-        <h2>Cooky Clock here !</h2>
-        <h2>{hours.length > 1 ? hours : "0"+hours} :
+      <div className="clock">
+        <h2 className="clock-text">Cookie Clock</h2>
+        <h1 className="time">{hours.length > 1 ? hours : "0"+hours} :
            {" " + (minutes.length > 1 ? minutes : "0"+minutes)} :
            {" " + (seconds.length > 1 ? seconds : "0"+seconds)}
           {checkAmPm}
-        </h2>
+        </h1>
+
+
+        <h3>  Date: <br></br>
+        {month}/{day}/{year} </h3>
+
       </div>
+
+
     );
   }
 
