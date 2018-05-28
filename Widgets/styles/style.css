@@ -33,11 +33,9 @@
   text-align: center;
   float: left;
   width: 78.5px;
-  border: 1px solid green;
+  border: 1px solid teal;
   padding: 5px;
 }
-
-
 
 .currentContent {
   position: relative;
@@ -49,8 +47,12 @@
   height: 300px;
   padding: 10px;
   background-color: darkgrey;
-  border: 1px solid green;
+  border: 1px solid teal;
   border-top-color: darkgrey;
+}
+
+.weather {
+  color: white;
 }
 
 body {
