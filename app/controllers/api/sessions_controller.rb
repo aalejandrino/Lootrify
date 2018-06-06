@@ -14,7 +14,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      render json ['invalid find_by_credentials'], status 401
+      render json: ['invalid find_by_credentials'], status: 401
     end
   end
 

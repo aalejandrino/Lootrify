@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { signup, login, logout } from './util/session_api_util';
-import configureStore from './store/store'
+// import { signup, login, logout } from './util/session_api_util';
+import { login } from './actions/session_actions';
+import configureStore from './store/store';
+import Root from './components/root.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -9,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.signup = signup;
+  // window.signup = signup;
   window.login = login;
-  window.logout = logout;
+  // window.logout = logout;
 
-  ReactDOM.render(<h1>Welcome to Lootrify</h1>, root);
+  ReactDOM.render(<Root store={ store }/>, root);
 });

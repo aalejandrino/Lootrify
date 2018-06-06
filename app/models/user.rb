@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
 
   def self.find_by_credentials(username, password)
-    user = User.find_by_username(username)
+    user = User.find_by(user_name:username)
     user && user.valid_password?(password) ? user : nil
   end
 
