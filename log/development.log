@@ -1,0 +1,366 @@
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:33:23 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/10b2246c8f8999ff/variables" for 127.0.0.1 at 2018-06-05 15:33:23 -0700
+Started GET "/" for 127.0.0.1 at 2018-06-05 15:35:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1766ms (Views: 1570.2ms)
+
+
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(251209128637665240)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180605232139)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "user_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying NOT NULL, "img_url" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_user_name" ON "users"  ("user_name")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180605232139"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-05 23:29:11.625360"], ["updated_at", "2018-06-05 23:29:11.625360"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(251209128637665240)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:10:27 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+NameError - Couldn't find Api::SessionsHelper, expected it to be defined in helpers/api/sessions_helper.rb:
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/54048b928c4286c9/variables" for 127.0.0.1 at 2018-06-05 17:10:28 -0700
+Started POST "/__better_errors/54048b928c4286c9/eval" for 127.0.0.1 at 2018-06-05 17:10:44 -0700
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:10:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 729ms (Views: 726.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:20:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 394ms (Views: 387.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:20:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:20:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 374ms (Views: 371.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:22:26 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::UsersController:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:22:43 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::UsersController:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:24:09 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::UsersController:
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:29:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:29:25 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :user_name
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 169ms (Views: 0.2ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:32:16 -0700
+Processing by StaticPagesController#root as */*
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:32:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-06-05 17:35:48 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:36:32 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:36:45 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 0.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:37:25 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:40:39 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 18ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:40:52 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - You need to supply at least one validation:
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:41:51 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 23ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:43:50 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - You need to supply at least one validation:
+  app/models/user.rb:4:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-06-05 17:44:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:47:26 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 17ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:49:13 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...oken, :password_digest presence: true
+...                               ^:
+  app/models/user.rb:2:in `'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:49:27 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 28ms (Views: 0.3ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:49:37 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :email, :phone, :img_url
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 20ms (Views: 0.3ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:51:56 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+Unpermitted parameters: :user_name, :img_url
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 21ms (Views: 0.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:52:16 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 21ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:52:59 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.1ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "phone", "img_url", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_name", "alfred123"], ["email", "alfred@alfred.com"], ["phone", "1234567890"], ["img_url", "alfred.com"], ["session_token", "Fb8UXO9ByGjlgpIQSrwKHw"], ["created_at", "2018-06-06 00:52:59.325670"], ["updated_at", "2018-06-06 00:52:59.325670"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 40.1ms)
+
+
+
+PG::NotNullViolation - ERROR:  null value in column "password_digest" violates not-null constraint
+DETAIL:  Failing row contains (1, alfred123, alfred@alfred.com, 1234567890, alfred.com, null, Fb8UXO9ByGjlgpIQSrwKHw, 2018-06-06 00:52:59.32567, 2018-06-06 00:52:59.32567).
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:53:15 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 33ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:54:14 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "phone", "img_url", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_name", "alfred123"], ["email", "alfred@alfred.com"], ["phone", "1234567890"], ["img_url", "alfred.com"], ["password_digest", "$2a$10$5AYf5kGutqgyd46R.ABVuerpka.K8aXXw4AEV4EY3uGISPX1mPQli"], ["session_token", "1SG5wz4llpqEtZOio7ndJA"], ["created_at", "2018-06-06 00:54:14.719505"], ["updated_at", "2018-06-06 00:54:14.719505"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mWJKfsVf9M1d-JBzwtYHgQ"], ["updated_at", "2018-06-06 00:54:14.726835"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (305.4ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 6.7ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x00007f85fbf5ac98>:0x00007f85fbf58cb8>
+Did you mean?  @user:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__1380983850905409709_70106717264540'
+  app/controllers/api/users_controller.rb:8:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:54:53 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred123", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "phone", "img_url", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_name", "alfred123"], ["email", "alfred@alfred.com"], ["phone", "1234567890"], ["img_url", "alfred.com"], ["password_digest", "$2a$10$0Pdmt0.kAVHXIQQrmPJPteBls//fXgHPX6UUZARTGJDPeUxbjsvuC"], ["session_token", "uFtIrthiUYIbfZy_0pxwfw"], ["created_at", "2018-06-06 00:54:53.132044"], ["updated_at", "2018-06-06 00:54:53.132044"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 4.7ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_user_name"
+DETAIL:  Key (user_name)=(alfred123) already exists.
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:55:39 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred1234", "email"=>"alfred@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "phone", "img_url", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_name", "alfred1234"], ["email", "alfred@alfred.com"], ["phone", "1234567890"], ["img_url", "alfred.com"], ["password_digest", "$2a$10$l.29IpiyiOt8c0fTkkuGzOd9LgDSFLk8B7eg9ZVgut5/mLF0Vs0hu"], ["session_token", "38SKhR0M1YTaWAU7B7JTQg"], ["created_at", "2018-06-06 00:55:39.743603"], ["updated_at", "2018-06-06 00:55:39.743603"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.9ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(alfred@alfred.com) already exists.
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-06-05 17:56:07 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"alfred1234", "email"=>"alfred123@alfred.com", "phone"=>"1234567890", "img_url"=>"alfred.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "phone", "img_url", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_name", "alfred1234"], ["email", "alfred123@alfred.com"], ["phone", "1234567890"], ["img_url", "alfred.com"], ["password_digest", "$2a$10$gnuI2Nf/U9ADsDoMJte6iO4e538og5LRbAmKT3pR692CbZIpO9bHG"], ["session_token", "TrsAhDaJ1PfqL_uHwpt3Gw"], ["created_at", "2018-06-06 00:56:07.855389"], ["updated_at", "2018-06-06 00:56:07.855389"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AZYztTcpkczEbRES0NGthQ"], ["updated_at", "2018-06-06 00:56:07.859777"], ["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 71ms (Views: 3.9ms | ActiveRecord: 4.5ms)
+
+
