@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sessionForm">
         <h2>Welcome to Lootrify!</h2>
         <h2>Please {this.props.formType}</h2>
 
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
 
           <label> Hi there! my name is
-            <input onChange={this.update('username')} type="text" value={this.state.user_name}/>
+            <input onChange={this.update('user_name')} type="text" value={this.state.user_name}/>
           </label>
           <br></br>
 

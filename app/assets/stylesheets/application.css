@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: white;
+  color: $grey;
+  font-size: 12px;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #5bc5a7;
+
+  }
+}
+
+#root {
+  height: 100%;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  color: black;
+}
+
+.top_nav {
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  color: white;
+}
+
+
+.login-signup {
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  
+  display: inline-flex;
+  left: 150px;
+  color: white;
+
+}
+
+
+.login {
+  vertical-align: baseline;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #fff;
+  background: #5bc5a7;
+  text-shadow: 0 -0.5px grey;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+  padding: 4px 10px 4px;
+}
+
+.signup {
+  vertical-align: baseline;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #fff;
+  background: #ff5216;
+  text-shadow: 0 -0.5px grey;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+  padding: 4px 10px 4px;
+}
+
+.logo_title {
+  position: relative;
+  right: 150px;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: #fff;
+  text-decoration: none;
+
+}
+.btn {
+
+}
