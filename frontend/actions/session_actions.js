@@ -6,8 +6,6 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 const receiveCurrentUser = (user) => {
 
-  // console.log(user)
-
   return{
     type: RECEIVE_CURRENT_USER,
     user

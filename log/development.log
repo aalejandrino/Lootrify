@@ -29668,3 +29668,65 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-07 01:25:42 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 893ms (Views: 890.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-07 01:25:58 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ko3ijX4NPfybIb_M8d7_RQ"], ["updated_at", "2018-06-07 08:25:58.398855"], ["id", 9]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 89ms (Views: 4.6ms | ActiveRecord: 11.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-07 01:26:04 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ko3ijX4NPfybIb_M8d7_RQ"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wSfKCwMr86db7OB0W2-W_A"], ["updated_at", "2018-06-07 08:26:04.853691"], ["id", 9]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-07 08:43:14 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 847ms (Views: 843.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-07 08:44:06 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OnSaVHo3ubbJNB0suvfuoQ"], ["updated_at", "2018-06-07 15:44:06.146123"], ["id", 9]]
+  [1m[35m (36.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (4.6ms)
+Completed 200 OK in 125ms (Views: 7.8ms | ActiveRecord: 45.7ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-07 08:48:30 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OnSaVHo3ubbJNB0suvfuoQ"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0WVMzVlF8r91YAyPWlMWTg"], ["updated_at", "2018-06-07 15:48:30.177854"], ["id", 9]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 9.2ms)
+
+
