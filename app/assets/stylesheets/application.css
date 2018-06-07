@@ -58,16 +58,37 @@ h3 {
   color: white;
 }
 
+.header-name {
+  font-size: 18px;
+}
+
+.header-name #profile-pic {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+}
+
+.header-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+#profile-pic {
+  /* background-image: url("images/default_pic.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
 
 .login-signup {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  
+
   display: inline-flex;
   left: 150px;
   color: white;
-
 }
 
 
