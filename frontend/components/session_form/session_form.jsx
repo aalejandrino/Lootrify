@@ -15,17 +15,29 @@ class SessionForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
+
+  clearState() {
+    this.setState (
+      {
+        user_name: '',
+        password: '',
+        email: '',
+      }
+    );
+
+  };
 
   update(input) {
     return (event) => this.setState({[input]: event.target.value});
-  }
+  };
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.clearState();
     this.props.processForm(user);
-  }
+  };
 
   renderErrors() {
     return(
@@ -37,7 +49,7 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
-  }
+  };
 
   render() {
     return (
