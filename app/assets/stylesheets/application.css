@@ -79,14 +79,6 @@ h3 {
   align-items: center;
 }
 
-#profile-pic {
-  /* background-image: url("images/default_pic.jpg"); */
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100px;
-  height: 100px;
-}
-
 .login-signup {
   position: relative;
   justify-content: space-around;
