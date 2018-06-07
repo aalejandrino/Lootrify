@@ -42,28 +42,40 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="sessionForm">
-        <h2>Welcome to Lootrify!</h2>
-        <h2>Please {this.props.formType}</h2>
+        <h3>{this.props.formType} - Introduce Yourself</h3>
 
         {this.renderErrors()}
 
-        <form onSubmit={this.handleSubmit}>
+        <form className="form-box" onSubmit={this.handleSubmit}>
 
-          <label> Hi there! my name is
-            <input onChange={this.update('user_name')} type="text" value={this.state.user_name}/>
-          </label>
-          <br></br>
+          <div id='signup-image'></div>
 
-          <label> Here's my email address:
-            <input onChange={this.update('email')} type="text" value={this.state.email}/>
-          </label>
-          <br></br>
+          <div id='signup-inputs'>
+            <h2>
+              Introduce Yourself
+            </h2>
+            <br></br>
 
-          <label> And here's my password:
-            <input onChange={this.update('password')} type="text" value={this.state.password}/>
-          </label>
+            <div> Hi there! my name is
+              <br></br>
+              <input onChange={this.update('user_name')} type="text" value={this.state.user_name}/>
+            </div>
+            <br></br>
 
-          <input type='submit' value={this.props.formType}/>
+            <div> Here's my email address:
+              <br></br>
+              <input onChange={this.update('email')} type="text" value={this.state.email}/>
+            </div>
+            <br></br>
+
+            <div> And here's my password:
+              <br></br>
+              <input onChange={this.update('password')} type="text" value={this.state.password}/>
+            </div>
+            <br></br>
+
+            <input className='submitBtn' type='submit' value={this.props.formType}/>
+          </div>
         </form>
 
       </div>

@@ -22,7 +22,7 @@ html {
 
 body {
   background: white;
-  color: $grey;
+  color: grey;
   font-size: 12px;
   height: 100%;
 }
@@ -51,11 +51,17 @@ h3 {
 }
 
 .top_nav {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   height: 50px;
   color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+
 }
 
 .header-name {
@@ -87,7 +93,7 @@ h3 {
   align-items: center;
 
   display: inline-flex;
-  left: 150px;
+  left: 50px;
   color: white;
 }
 
@@ -102,7 +108,8 @@ h3 {
   text-decoration: none;
   border-radius: 3px;
   box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
-  padding: 4px 10px 4px;
+  padding: 6px 10px 6px 10px;
+  margin: 10px;
 }
 
 .signup {
@@ -113,18 +120,19 @@ h3 {
   background: #ff5216;
   text-shadow: 0 -0.5px grey;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
-  padding: 4px 10px 4px;
+  padding: 6px 10px 6px 10px;
+  margin: 10px;
 }
 
 .logo_title {
   position: relative;
-  right: 150px;
+  right: 50px;
   font-family: Georgia, serif;
   font-size: 22px;
   font-weight: 200;
-  letter-spacing: 5px;
+  letter-spacing: 8px;
   color: #fff;
   text-decoration: none;
 
