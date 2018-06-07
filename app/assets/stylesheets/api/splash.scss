@@ -1,0 +1,126 @@
+.splashPage {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  top: 60px;
+  white-space: normal;
+}
+
+.splashPage h2 {
+  margin: 0;
+  font-size: 68px;
+  text-align: center;
+  display: inline-flex;
+
+}
+
+.demoBtn {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 36px;
+  color: #fff;
+  background: #ff652f;
+  text-shadow: 0 -0.5px grey;
+  text-decoration: none;
+  border-radius: 5px;
+  // box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  padding: 20px 50px;
+}
+
+#splash-small-icon {
+  background-image: url('https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/logo-d23d9f9f3a93162ac760371c8e22fea7e14a9d8491b477e7925e551b14172ada.png');
+  background-size: 64px 64px;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+#caption1 {
+  // width: 900px;
+  color: #444;
+}
+
+#tag-line {
+  bottom: 10px;
+  font-size: 21px;
+  line-height: 26px;
+  color: #444;
+}
+
+.splash-pics {
+  display: inline-flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#splash-cover {
+  background-image: image-url('splash_cover.png');
+  background-size: 367px 250px;
+  position: relative;
+  width: 367px;
+  height: 250px;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#splash-mascot{
+  background-image: image-url('splash_mascot.jpg');
+  background-size: 150px 250px;
+  position: relative;
+  width: 150px;
+  height: 250px;
+  background-color: transparent;
+  border-radius: 20px;
+  // border: 1px solid black;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  margin-left: 15px;
+}
+
+#companies {
+  background-image: image-url('company_logos.jpg');
+  background-size: 980px 112px;
+  width: 980px;
+  height: 112px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+  right: 100px;
+  padding: 20px;
+  background: #666;
+  color: white;
+  font-size: 24px;
+  line-height: 30px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+
+}
+
+.footer > div {
+  position: relative;
+  left: 50px;
+  text-align: left;
+}
+
+.footer #footer-caption {
+  padding-bottom: 10px;
+}
+
+.footer #footer-aA {
+  font-size: 16px;
+  padding-top: 10px;
+}

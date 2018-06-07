@@ -26,7 +26,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
