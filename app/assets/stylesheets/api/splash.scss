@@ -53,28 +53,37 @@
 
 .splash-pics {
   display: inline-flex;
+  align-items: center;
   margin-top: 25px;
   margin-bottom: 25px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 440px;
+  padding: 23px 0;
 }
 
 #splash-cover {
   background-image: image-url('splash_cover.png');
-  background-size: 367px 250px;
+  background-size: cover;
   position: relative;
-  width: 367px;
-  height: 250px;
-  background-color: transparent;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  width: 806px;
+  height: 100%;
+  background-color: transparent;
+  -webkit-transition: all .25s ease;
 }
 
 #splash-mascot{
   background-image: image-url('splash_mascot.jpg');
-  background-size: 150px 250px;
+  background-size: cover;
   position: relative;
-  width: 150px;
-  height: 250px;
+  display: block;
+  margin-right: auto;
+  width: 250px;
+  height: 100%;
   background-color: transparent;
   border-radius: 20px;
   // border: 1px solid black;

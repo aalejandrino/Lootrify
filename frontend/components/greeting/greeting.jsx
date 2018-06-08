@@ -23,7 +23,7 @@ const Greeting = (props) => {
       <div>or</div>
 
 
-      <Link to="/signup" className="signup btn" onClick={handleClick.bind(this)}>Sign up!</Link>
+      <Link to="/signup" className="signup btn" onClick={() => props.closeModal()}>Sign up!</Link>
     </nav>
   );
   const personalGreeting = () => (

@@ -46,28 +46,36 @@
 .signin-inputs input {
   width: 295px;
   height: 28px;
+  z-index: 98;
   border: 1px solid #ccc;
-  border-radius: 0 0 2px 2px;
+  border-radius: 3px;
+  color: darkgrey;
 }
 
 #signin-inputs h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0px;
+  vertical-align: middle;
+  width: 295px;
+  height: 60px;
+  z-index: 98;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  color: darkgrey;
 }
 
-.close-x {
-  position: absolute;
-  right: 150px;
-  bottom: 250px;
-  background-color: lightgrey;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-
-
+.modalSubmitBtn {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background: #5bc5a7;
+  text-shadow: 0 -0.5px darkgrey;
+  text-decoration: none;
+  border-radius: 3px;
+  border-width: 0.5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 6px 10px 6px 10px;
 }
 
 #signup-image {

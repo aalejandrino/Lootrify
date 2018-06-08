@@ -76,7 +76,8 @@ class LoginSessionForm extends React.Component {
             </div>
 
             <h3>
-              Welcome, Please Login !
+              Welcome to Lootrify, <br></br>
+              Please Login !
             </h3>
             <br></br>
 
