@@ -1,129 +1,129 @@
-// Place all the styles related to the api/sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.sessionForm {
-  display: block;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  top: 50px;
-
-}
-
-.sessionForm > form {
-  background-color: white;
-  display: block;
-  text-align: left;
-}
-
-.form-box {
-  width: 620px;
-}
-
-.form-box div {
-  display:inline-block;
-}
-
-.signin-form-box {
-  width: 300px;
-  height: 220px;
-  background: lightgrey;
-  text-align: center;
-  position: fixed;
-  z-index: 98;
-  top: 50px;
-  right: 150px;
-  padding: 10px;
-  color: #333;
-  text-shadow: none;
-  background: #eee;
-  border: 1px solid #ccc;
-  border-radius: 0 0 5px 5px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-
-.signin-inputs input {
-  width: 295px;
-  height: 28px;
-  z-index: 98;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  color: darkgrey;
-}
-
-#signin-inputs h3 {
-  margin: 0px;
-  vertical-align: middle;
-  width: 295px;
-  height: 60px;
-  z-index: 98;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: white;
-  color: darkgrey;
-}
-
-.modalSubmitBtn {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  color: white;
-  background: #5bc5a7;
-  text-shadow: 0 -0.5px darkgrey;
-  text-decoration: none;
-  border-radius: 3px;
-  border-width: 0.5px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 6px 10px 6px 10px;
-}
-
-#signup-image {
-  background-image: url('https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/logo-d23d9f9f3a93162ac760371c8e22fea7e14a9d8491b477e7925e551b14172ada.png');
-  background-size: 200px 200px;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: transparent;
-}
-
-#signup-inputs {
-  display: inline-block;
-  vertical-align: top;
-  width: 375px;
-  height: 490px;
-  margin-left: 45px;
-}
-
-#signup-inputs div {
-  color: black;
-  font-size: 22px;
-}
-
-#signup-inputs h2 {
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #999;
-  font-weight: bold;
-  line-height: 20px;
-}
-
-#signup-inputs input {
-  width: 350px;
-  height: 40px;
-  margin-bottom: 25px;
-}
-
-#signup-inputs .submitBtn {
-  vertical-align: center;
-  font-size: 24px;
-  width: 152px;
-  height: 52px;
-  color: #fff;
-  background: #ff5216;
-  text-shadow: 0 -0.5px grey;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
-  padding: 11px 15px;
-}
+// // Place all the styles related to the api/sessions controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+//
+// .sessionForm {
+//   display: block;
+//   max-width: 600px;
+//   margin: 0 auto;
+//   position: relative;
+//   top: 50px;
+//
+// }
+//
+// .sessionForm > form {
+//   background-color: white;
+//   display: block;
+//   text-align: left;
+// }
+//
+// .form-box {
+//   width: 620px;
+// }
+//
+// .form-box div {
+//   display:inline-block;
+// }
+//
+// .signin-form-box {
+//   width: 300px;
+//   height: 220px;
+//   background: lightgrey;
+//   text-align: center;
+//   position: fixed;
+//   z-index: 98;
+//   top: 50px;
+//   right: 150px;
+//   padding: 10px;
+//   color: #333;
+//   text-shadow: none;
+//   background: #eee;
+//   border: 1px solid #ccc;
+//   border-radius: 0 0 5px 5px;
+//   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+// }
+//
+// .signin-inputs input {
+//   width: 295px;
+//   height: 28px;
+//   z-index: 98;
+//   border: 1px solid #ccc;
+//   border-radius: 3px;
+//   color: darkgrey;
+// }
+//
+// #signin-inputs h3 {
+//   margin: 0px;
+//   vertical-align: middle;
+//   width: 295px;
+//   height: 60px;
+//   z-index: 98;
+//   border: 1px solid #ccc;
+//   border-radius: 3px;
+//   background-color: white;
+//   color: darkgrey;
+// }
+//
+// .modalSubmitBtn {
+//   width: 100%;
+//   font-size: 12px;
+//   text-align: center;
+//   color: white;
+//   background: #5bc5a7;
+//   text-shadow: 0 -0.5px darkgrey;
+//   text-decoration: none;
+//   border-radius: 3px;
+//   border-width: 0.5px;
+//   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+//   padding: 6px 10px 6px 10px;
+// }
+//
+// #signup-image {
+//   background-image: url('https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/logo-d23d9f9f3a93162ac760371c8e22fea7e14a9d8491b477e7925e551b14172ada.png');
+//   background-size: 200px 200px;
+//   position: relative;
+//   width: 200px;
+//   height: 200px;
+//   background-color: transparent;
+// }
+//
+// #signup-inputs {
+//   display: inline-block;
+//   vertical-align: top;
+//   width: 375px;
+//   height: 490px;
+//   margin-left: 45px;
+// }
+//
+// #signup-inputs div {
+//   color: black;
+//   font-size: 22px;
+// }
+//
+// #signup-inputs h2 {
+//   text-transform: uppercase;
+//   font-size: 16px;
+//   color: #999;
+//   font-weight: bold;
+//   line-height: 20px;
+// }
+//
+// #signup-inputs input {
+//   width: 350px;
+//   height: 40px;
+//   margin-bottom: 25px;
+// }
+//
+// #signup-inputs .submitBtn {
+//   vertical-align: center;
+//   font-size: 24px;
+//   width: 152px;
+//   height: 52px;
+//   color: #fff;
+//   background: #ff5216;
+//   text-shadow: 0 -0.5px grey;
+//   text-decoration: none;
+//   border-radius: 5px;
+//   box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+//   padding: 11px 15px;
+// }
