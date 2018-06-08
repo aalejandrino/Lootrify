@@ -14,7 +14,8 @@
  *= require_self
  */
 
-/* html {
+
+html {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
@@ -128,4 +129,4 @@ h3 {
   color: #fff;
   text-decoration: none;
 
-} */
+}
