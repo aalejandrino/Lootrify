@@ -9,7 +9,7 @@ class LoginSessionForm extends React.Component {
 
     // this.state = props.user;
     this.state = {
-      user_name: 'Email address',
+      user_name: 'User Name',
       password: 'Password',
       email: '',
     }
@@ -20,7 +20,7 @@ class LoginSessionForm extends React.Component {
   clearState() {
     this.setState (
       {
-        user_name: 'Email address',
+        user_name: 'User Name',
         password: 'Password',
         email: '',
       }
