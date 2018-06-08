@@ -20,6 +20,7 @@ class Splash extends React.Component {
   handleSubmit(e) {
 
     const user = Object.assign({}, this.state);
+    this.props.closeModal();
     this.props.processForm(user);
   }
 

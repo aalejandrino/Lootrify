@@ -118,6 +118,18 @@ h3 {
   margin: 10px;
 }
 
+.modalSubmitBtn {
+  font-size: 12px;
+  color: white;
+  background: #5bc5a7;
+  text-shadow: 0 -0.5px grey;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 6px 10px 6px 10px;
+  margin: 10px;
+}
+
 .logo_title {
   position: relative;
   right: 50px;

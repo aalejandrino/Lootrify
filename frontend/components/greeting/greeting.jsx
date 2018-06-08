@@ -6,12 +6,24 @@ import { Link } from 'react-router-dom';
 const Greeting = (props) => {
   let currentUser = props.currentUser;
   let logout = props.logout;
+  let openModal = props.openModal;
+  let closeModal = props.closeModal;
+
+  const handleClick = () => {
+    if (props.isOpen) {
+      closeModal()
+    } else {
+      openModal('login')
+    }
+  }
 
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login" className="login btn">Login</Link>
+      <Link to="/" className="login btn" onClick={handleClick.bind(this)}>Login</Link>
       <div>or</div>
-      <Link to="/signup" className="signup btn">Sign up!</Link>
+
+
+      <Link to="/signup" className="signup btn" onClick={handleClick.bind(this)}>Sign up!</Link>
     </nav>
   );
   const personalGreeting = () => (

@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
 
             <div> And here's my password:
               <br></br>
-              <input onChange={this.update('password')} type="text" value={this.state.password}/>
+              <input onChange={this.update('password')} type="password" value={this.state.password}/>
             </div>
             <br></br>
 

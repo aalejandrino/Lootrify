@@ -25,6 +25,51 @@
   display:inline-block;
 }
 
+.signin-form-box {
+  width: 300px;
+  height: 220px;
+  background: lightgrey;
+  text-align: center;
+  position: fixed;
+  z-index: 98;
+  top: 50px;
+  right: 150px;
+  padding: 10px;
+  color: #333;
+  text-shadow: none;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.signin-inputs input {
+  width: 295px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 2px 2px;
+}
+
+#signin-inputs h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.close-x {
+  position: absolute;
+  right: 150px;
+  bottom: 250px;
+  background-color: lightgrey;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+
+
+}
+
 #signup-image {
   background-image: url('https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/logo-d23d9f9f3a93162ac760371c8e22fea7e14a9d8491b477e7925e551b14172ada.png');
   background-size: 200px 200px;
