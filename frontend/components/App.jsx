@@ -16,7 +16,7 @@ const App = () => (
       <Link to="/" className='logo_title'>
           LOOTRIFY
       </Link>
-
+ 
       <GreetingContainer />
     </header>
     <Switch>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     #   resources :friendships, only: [:show, :index]
     # end
 
-    resources :friendships, only: [:show, :index, :create]
+    resources :friend, only: [:show, :index, :create]
 
     # namespace :users do
     #   resources :search, only: [:index]
