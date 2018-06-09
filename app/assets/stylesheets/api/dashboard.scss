@@ -1,0 +1,37 @@
+.center_container {
+  position: relative;
+  min-height: 100%;
+  height: 1000px;
+  overflow: visible;
+  width: 950px;
+  margin: -33px auto 0;
+  padding: 0;
+  top: 51px;
+}
+
+.centerBars {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSideBar {
+  // background-color: red;
+  width: 200px;
+  height: 200px;
+}
+
+.centerColumn {
+  // background-color: lightgrey;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  width: 500px;
+  height: 100%;
+}
+
+.rightSideBar {
+  // background-color: blue;
+  width: 200px;
+  height: 200px;
+}

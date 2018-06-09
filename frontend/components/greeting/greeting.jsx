@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 
@@ -17,6 +17,12 @@ const Greeting = (props) => {
     }
   }
 
+  const handleLogout = () => {
+    logout(),
+    <Redirect to="/" />
+
+  }
+
   const sessionLinks = () => (
     <nav className="login-signup">
       <Link to="/" className="login btn" onClick={handleClick.bind(this)}>Login</Link>
@@ -30,7 +36,7 @@ const Greeting = (props) => {
     <hgroup className="header-group">
       <div id='profile-pic'></div>
       <h2 className="header-name">{currentUser.user_name}</h2>
-      <button className="header-logout btn" onClick={ () => logout()}>Log Out</button>
+      <button className="header-logout btn" onClick={handleLogout.bind(this)}>Log Out</button>
     </hgroup>
   );
 

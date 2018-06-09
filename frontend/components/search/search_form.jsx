@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class SearchForm extends React.Component {
 
   componentDidMount() {
-    
+
   }
 
   constructor(props) {

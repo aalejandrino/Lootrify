@@ -38,7 +38,7 @@ class LoginSessionForm extends React.Component {
     this.clearState();
     this.props.processForm(user);
 
-    this.props.closeModal;
+    this.props.closeModal();
 
   };
 
@@ -58,9 +58,7 @@ class LoginSessionForm extends React.Component {
     return (
       <div className="modalSessionForm">
         <form className="signin-form-box" onSubmit={this.handleSubmit}>
-
           <div id='signin-inputs'>
-
             <div className='signin-inputs'>
               <div>
                 <input

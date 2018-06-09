@@ -39249,3 +39249,1890 @@ Processing by Api::SearchController#users as JSON
 Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/api/search/users?query=aw" for 127.0.0.1 at 2018-06-09 13:06:48 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"aw"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'aw%')[0m
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/index.json.jbuilder (39.6ms)
+Completed 200 OK in 52ms (Views: 35.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:08:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 386ms (Views: 378.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:10:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 105ms (Views: 98.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:16:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 854ms (Views: 849.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:16:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:17:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 145ms (Views: 142.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:17:26 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:17:26 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:17:26 -0700
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "GnYT41UZ91NdD2tZkFTrOg"], ["updated_at", "2018-06-09 20:17:26.803117"], ["id", 10]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/show.json.jbuilder (9.2ms)
+Completed 200 OK in 124ms (Views: 15.0ms | ActiveRecord: 11.2ms)
+
+
+Completed 200 OK in 116ms (Views: 114.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:17:28 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:17:28 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35mSQL (5.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "8pvOBloMFNVGMu3RfBbu3w"], ["updated_at", "2018-06-09 20:17:28.813734"], ["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 94ms (Views: 2.9ms | ActiveRecord: 7.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:17:29 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8pvOBloMFNVGMu3RfBbu3w"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "b36dm9akKSuDhJNUKThBXw"], ["updated_at", "2018-06-09 20:17:29.998524"], ["id", 10]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:18:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 581ms (Views: 577.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:18:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 497ms (Views: 490.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:18:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:20:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 680ms (Views: 674.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:22:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 370ms (Views: 366.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:23:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 388ms (Views: 383.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:24:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 460ms (Views: 456.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:24:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 383ms (Views: 380.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:24:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:25:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 370ms (Views: 367.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:26:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 404ms (Views: 401.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:27:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 1155ms (Views: 1150.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:27:16 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:27:16 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:27:16 -0700
+Processing by StaticPagesController#root as HTML
+  [1m[35mSQL (4.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DrnQ80hhf_u7PQzR2O7MKQ"], ["updated_at", "2018-06-09 20:27:16.701784"], ["id", 10]]
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (13.1ms)
+Completed 200 OK in 148ms (Views: 25.2ms | ActiveRecord: 26.3ms)
+
+
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:27:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:27:19 -0700
+Processing by Api::SessionsController#create as JSON
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35mSQL (6.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1MF1VXrcZOOYZ-ytzA2bqA"], ["updated_at", "2018-06-09 20:27:19.334214"], ["id", 10]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 88ms (Views: 3.8ms | ActiveRecord: 12.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:29:41 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1MF1VXrcZOOYZ-ytzA2bqA"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Cney8AthMtAPk-Lgsvx_yA"], ["updated_at", "2018-06-09 20:29:41.160771"], ["id", 10]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:29:46 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "R9tyYQYsVIuv1aHvrLzqpQ"], ["updated_at", "2018-06-09 20:29:46.794395"], ["id", 9]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 84ms (Views: 1.9ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:29:54 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "R9tyYQYsVIuv1aHvrLzqpQ"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_w8qkrBkJgU1T0mj_2jBXQ"], ["updated_at", "2018-06-09 20:29:54.505927"], ["id", 9]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:29:58 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:29:58 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fngmQMXbpMjwLPDkyoRE2A"], ["updated_at", "2018-06-09 20:29:58.888413"], ["id", 10]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 113ms (Views: 2.4ms | ActiveRecord: 9.5ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:29:59 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fngmQMXbpMjwLPDkyoRE2A"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bj-_B0Y749FDVHYWy2-pew"], ["updated_at", "2018-06-09 20:29:59.975721"], ["id", 10]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:30:04 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "VSBap83A5lmCuir5bWGBTg"], ["updated_at", "2018-06-09 20:30:05.091934"], ["id", 9]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 138ms (Views: 2.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:30:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VSBap83A5lmCuir5bWGBTg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 529ms (Views: 526.0ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:30:37 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VSBap83A5lmCuir5bWGBTg"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "MFf6aU5QCiN4esb8aGfnow"], ["updated_at", "2018-06-09 20:30:37.481571"], ["id", 9]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:30:43 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2AF4vajGTdCpk1kO511gTw"], ["updated_at", "2018-06-09 20:30:43.222535"], ["id", 9]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 77ms (Views: 2.2ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:30:48 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2AF4vajGTdCpk1kO511gTw"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QOZen5NjQRHPvFrVtVk0pg"], ["updated_at", "2018-06-09 20:30:48.073868"], ["id", 9]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:31:06 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "31uVmSbDUQ-Yd-L8e8MnOw"], ["updated_at", "2018-06-09 20:31:06.626666"], ["id", 9]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 84ms (Views: 3.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:34:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "31uVmSbDUQ-Yd-L8e8MnOw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:35:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "31uVmSbDUQ-Yd-L8e8MnOw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:37:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "31uVmSbDUQ-Yd-L8e8MnOw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 599ms (Views: 591.5ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:37:19 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "31uVmSbDUQ-Yd-L8e8MnOw"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "k9KAhUIxzhtfD8tTMXo9_A"], ["updated_at", "2018-06-09 20:37:19.896778"], ["id", 9]]
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 49.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:37:26 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:37:26 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:37:26 -0700
+Processing by StaticPagesController#root as HTML
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1NTbfo15tOXQwTKkTUpWeQ"], ["updated_at", "2018-06-09 20:37:26.344708"], ["id", 10]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (11.8ms)
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (31.9ms)
+Completed 200 OK in 155ms (Views: 37.4ms | ActiveRecord: 11.0ms)
+
+
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:37:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:37:29 -0700
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jQ4_sk-1wHbv871QBTkJzg"], ["updated_at", "2018-06-09 20:37:29.176819"], ["id", 10]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.7ms)
+Completed 200 OK in 99ms (Views: 5.6ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:37:30 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jQ4_sk-1wHbv871QBTkJzg"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vakfnhcwhm0F-xRex8BraA"], ["updated_at", "2018-06-09 20:37:30.808610"], ["id", 10]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:39:46 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:39:46 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (32.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_wyKyqCn42ZQnrYgoqYbsQ"], ["updated_at", "2018-06-09 20:39:47.082425"], ["id", 10]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 150ms (Views: 4.0ms | ActiveRecord: 35.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:39:48 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_wyKyqCn42ZQnrYgoqYbsQ"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WU66liNcv8WwAbfg_znqUQ"], ["updated_at", "2018-06-09 20:39:48.755766"], ["id", 10]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:39:53 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:39:53 -0700
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Api::SessionsController#create as JSON
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QzFp1L6rKRYFT1chp-oggg"], ["updated_at", "2018-06-09 20:39:53.688947"], ["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 94ms (Views: 6.0ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:39:55 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QzFp1L6rKRYFT1chp-oggg"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "IkaHcEdzjdJTqRkMc66njw"], ["updated_at", "2018-06-09 20:39:55.043430"], ["id", 10]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 24ms (Views: 1.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:40:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 416ms (Views: 413.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:40:18 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:40:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35mSQL (5.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XyTSCJDkuO0m5S6L9cbCrg"], ["updated_at", "2018-06-09 20:40:19.081376"], ["id", 10]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 106ms (Views: 3.6ms | ActiveRecord: 8.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:40:20 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XyTSCJDkuO0m5S6L9cbCrg"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mpEFboU3aI9othAxtItOog"], ["updated_at", "2018-06-09 20:40:20.321368"], ["id", 10]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 32ms (Views: 0.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:42:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 419ms (Views: 417.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:42:18 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:42:18 -0700
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35mSQL (4.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lYG3CRqYzDz_pWVrPy26-w"], ["updated_at", "2018-06-09 20:42:18.768733"], ["id", 10]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 103ms (Views: 3.4ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:43:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lYG3CRqYzDz_pWVrPy26-w"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 424ms (Views: 422.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:43:36 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lYG3CRqYzDz_pWVrPy26-w"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "b8c-hbVtoOE--29xEODC7g"], ["updated_at", "2018-06-09 20:43:36.975569"], ["id", 10]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:43:47 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:43:47 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qEkrwK79ILEXE8aWy_08Jw"], ["updated_at", "2018-06-09 20:43:47.862498"], ["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered api/users/show.json.jbuilder (4.1ms)
+Completed 200 OK in 122ms (Views: 6.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:43:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qEkrwK79ILEXE8aWy_08Jw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:44:00 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qEkrwK79ILEXE8aWy_08Jw"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "O5ml_C4M06rakmy6OvQF4A"], ["updated_at", "2018-06-09 20:44:00.045154"], ["id", 10]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:45:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 1105ms (Views: 1100.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:45:27 -0700
+  [1m[35mSQL (4.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oG_V0xMZCTFymVC_Pa2rIw"], ["updated_at", "2018-06-09 20:45:27.307139"], ["id", 10]]
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 114ms (Views: 4.8ms | ActiveRecord: 24.2ms)
+
+
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 36ms (Views: 28.5ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:29 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "g9oXMrtjikq9Llf6gsHCzA"], ["updated_at", "2018-06-09 20:45:30.086761"], ["id", 10]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 83ms (Views: 3.2ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:45:30 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "g9oXMrtjikq9Llf6gsHCzA"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tYaVQ5klTrUgTy6Pp1bSyw"], ["updated_at", "2018-06-09 20:45:30.823911"], ["id", 10]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 22ms (Views: 1.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:45:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 473ms (Views: 469.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:59 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:45:59 -0700
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jWnRIOvcOqDA0FrMvr2YCQ"], ["updated_at", "2018-06-09 20:45:59.931082"], ["id", 10]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.8ms)
+Completed 200 OK in 125ms (Views: 6.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:46:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jWnRIOvcOqDA0FrMvr2YCQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:46:56 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jWnRIOvcOqDA0FrMvr2YCQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 1766ms (Views: 1758.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:48:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jWnRIOvcOqDA0FrMvr2YCQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 142ms (Views: 126.0ms | ActiveRecord: 13.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:48:04 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jWnRIOvcOqDA0FrMvr2YCQ"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Wse4BfXBhGyc-xRq67Ngyg"], ["updated_at", "2018-06-09 20:48:04.851078"], ["id", 10]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:50:12 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9DTjKA9ZaFKiewziSN7Yig"], ["updated_at", "2018-06-09 20:50:12.903032"], ["id", 9]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 82ms (Views: 2.6ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 13:50:14 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9DTjKA9ZaFKiewziSN7Yig"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "IbiWJvcjUFIOT4GbJSpQhg"], ["updated_at", "2018-06-09 20:50:14.114175"], ["id", 9]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 33ms (Views: 0.8ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:52:03 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 13:52:03 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 13:52:03 -0700
+Processing by StaticPagesController#root as HTML
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "zm1IJopQkDYn_aQRC9jEJw"], ["updated_at", "2018-06-09 20:52:03.955557"], ["id", 10]]
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered api/users/show.json.jbuilder (3.3ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 9.2ms | ActiveRecord: 10.2ms)
+
+
+  Rendered static_pages/root.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 417ms (Views: 409.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:00:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 525ms (Views: 521.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:01:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:01:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 374ms (Views: 371.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:01:48 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:01:48 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:01:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (76.9ms)
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9nidVeczasGstw6JBvzT9g"], ["updated_at", "2018-06-09 21:01:48.737487"], ["id", 10]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+Completed 200 OK in 129ms (Views: 126.6ms | ActiveRecord: 1.0ms)
+
+
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (4.5ms)
+Completed 200 OK in 149ms (Views: 9.9ms | ActiveRecord: 24.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:01:51 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:01:51 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "4Hc13XDCqTgR5_wY9vYtBA"], ["updated_at", "2018-06-09 21:01:51.429402"], ["id", 10]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 85ms (Views: 2.8ms | ActiveRecord: 12.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:02:59 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4Hc13XDCqTgR5_wY9vYtBA"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "s6nsMZHkCfzx0Q1xVDzVEQ"], ["updated_at", "2018-06-09 21:02:59.848962"], ["id", 10]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 20ms (Views: 1.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:03:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "q2fbb0Nb6ax_Yv4oa6EtwQ"], ["updated_at", "2018-06-09 21:03:11.740813"], ["id", 9]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 131ms (Views: 2.0ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:03:13 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "q2fbb0Nb6ax_Yv4oa6EtwQ"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5g3VIDzqAtqDkZmWFwLPCQ"], ["updated_at", "2018-06-09 21:03:13.976060"], ["id", 9]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 24ms (Views: 0.9ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:05:27 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:05:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ZsjhRitdKqocINp61ypDFw"], ["updated_at", "2018-06-09 21:05:27.270636"], ["id", 10]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/show.json.jbuilder (7.2ms)
+Completed 200 OK in 155ms (Views: 14.0ms | ActiveRecord: 7.7ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:05:30 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZsjhRitdKqocINp61ypDFw"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fg_ow_mvryDHAx874R3ucg"], ["updated_at", "2018-06-09 21:05:30.721639"], ["id", 10]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 28ms (Views: 1.2ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:05:40 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "4oJa1neh-BJDpZ-bywOESQ"], ["updated_at", "2018-06-09 21:05:41.049439"], ["id", 9]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 167ms (Views: 6.5ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:05:50 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4oJa1neh-BJDpZ-bywOESQ"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "fV6s-xCrs-afgwnFMkr-SA"], ["updated_at", "2018-06-09 21:05:50.580338"], ["id", 9]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27ms (Views: 1.2ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "gbiXGMOKhXMthUUAWETrQQ"], ["updated_at", "2018-06-09 21:08:20.009166"], ["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 116ms (Views: 4.2ms | ActiveRecord: 18.5ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:08:25 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gbiXGMOKhXMthUUAWETrQQ"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OCh1pOzhb7MX_pGPP38hTA"], ["updated_at", "2018-06-09 21:08:25.182894"], ["id", 10]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 29ms (Views: 1.6ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:26 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:26 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UxVca9PAjAn9kHGOg6BOVg"], ["updated_at", "2018-06-09 21:08:26.858789"], ["id", 10]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 122ms (Views: 2.5ms | ActiveRecord: 15.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:08:27 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UxVca9PAjAn9kHGOg6BOVg"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "SVADRYhky-rcHrTtLi87Uw"], ["updated_at", "2018-06-09 21:08:27.821712"], ["id", 10]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:08:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 789ms (Views: 783.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:38 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:08:38 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CmfKCaGZppodSJvt8oamig"], ["updated_at", "2018-06-09 21:08:38.885961"], ["id", 10]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 203ms (Views: 98.1ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:17:39 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 1359ms (Views: 1354.5ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:08 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:08 -0700
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:20:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  Parameters: {"user"=>"undefined"}
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hpt54gljp7ogvJhKow6V4A"], ["updated_at", "2018-06-09 21:20:08.701304"], ["id", 10]]
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 278ms (Views: 5.0ms | ActiveRecord: 118.1ms)
+
+
+Completed 200 OK in 451ms (Views: 443.3ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:17 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:17 -0700
+Processing by Api::SessionsController#create as JSON
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tIbidOkWExhGigGLtLCtkA"], ["updated_at", "2018-06-09 21:20:17.550940"], ["id", 10]]
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 90ms (Views: 2.7ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:20:18 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tIbidOkWExhGigGLtLCtkA"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Tl5Z-P-baikWomK6NsW1ww"], ["updated_at", "2018-06-09 21:20:18.640043"], ["id", 10]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 29ms (Views: 1.0ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:24 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ipzEgf0ivEWYxZYgzEAdOw"], ["updated_at", "2018-06-09 21:20:24.271401"], ["id", 9]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 80ms (Views: 2.1ms | ActiveRecord: 7.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:20:27 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ipzEgf0ivEWYxZYgzEAdOw"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tSjLQwJ6PhJLZUuoN3qSfw"], ["updated_at", "2018-06-09 21:20:27.215583"], ["id", 9]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 0.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:20:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 390ms (Views: 385.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:52 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:52 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "4NKGx8MO0YMY5w_O2ygubA"], ["updated_at", "2018-06-09 21:20:52.172896"], ["id", 10]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 128ms (Views: 2.4ms | ActiveRecord: 21.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:20:54 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4NKGx8MO0YMY5w_O2ygubA"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UAYg89gWTqYPnR4o13SZfg"], ["updated_at", "2018-06-09 21:20:54.578917"], ["id", 10]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:20:59 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "K77YhYPNR92hZ0bUavhUPw"], ["updated_at", "2018-06-09 21:20:59.478183"], ["id", 9]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 87ms (Views: 2.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:26:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "K77YhYPNR92hZ0bUavhUPw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 371ms (Views: 369.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:27:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "K77YhYPNR92hZ0bUavhUPw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 366ms (Views: 362.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:27:06 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "K77YhYPNR92hZ0bUavhUPw"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FnpjAfhQQ5yUgsuCP8pSyQ"], ["updated_at", "2018-06-09 21:27:06.053817"], ["id", 9]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:27:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:27:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CARjt4YtHZQbLIC8vMdtiQ"], ["updated_at", "2018-06-09 21:27:08.204436"], ["id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 87ms (Views: 2.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:27:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CARjt4YtHZQbLIC8vMdtiQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 153ms (Views: 150.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:27:40 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CARjt4YtHZQbLIC8vMdtiQ"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Clmd0t82spD8unB2TLruww"], ["updated_at", "2018-06-09 21:27:40.382420"], ["id", 10]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 1.0ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:27:42 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:27:42 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["updated_at", "2018-06-09 21:27:42.320003"], ["id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 123ms (Views: 2.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:28:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 433ms (Views: 430.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:28:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 125ms (Views: 122.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:28:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 104ms (Views: 102.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:29:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:29:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 113ms (Views: 111.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:30:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:30:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 86ms (Views: 83.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:31:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (7.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 606ms (Views: 597.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:33:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 579ms (Views: 571.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:34:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 355ms (Views: 353.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:34:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 1104ms (Views: 1098.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:35:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:35:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 105ms (Views: 102.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:36:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 127ms (Views: 124.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:39:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:40:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 149ms (Views: 145.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:40:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 140ms (Views: 136.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:41:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 101ms (Views: 99.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:41:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 118ms (Views: 115.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:42:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 157ms (Views: 154.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:42:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:43:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 135ms (Views: 133.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:43:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 726ms (Views: 722.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:44:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 160ms (Views: 157.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:44:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 172ms (Views: 168.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:45:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 122ms (Views: 120.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:45:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (4.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:45:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 169ms (Views: 166.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:46:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:46:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 147ms (Views: 143.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:47:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 136ms (Views: 133.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:47:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:48:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 192ms (Views: 189.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:48:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:48:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 117ms (Views: 114.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:06 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OlyMR4Its-ZU0J8LWotNvw"], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ksxGo6mPRfG7odVcYpXVxw"], ["updated_at", "2018-06-09 21:49:06.581027"], ["id", 10]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:08 -0700
+Processing by Api::SessionsController#create as JSON
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:08 -0700
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "B02hA4OB_dKAUQov62n4gA"], ["updated_at", "2018-06-09 21:49:08.529005"], ["id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 97ms (Views: 2.9ms | ActiveRecord: 10.2ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:09 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "B02hA4OB_dKAUQov62n4gA"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "GVWjINpuf4e4uWvcV_oT0Q"], ["updated_at", "2018-06-09 21:49:09.865717"], ["id", 10]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:12 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:12 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "cvNoPU0cZQheEsQgy9Sm3g"], ["updated_at", "2018-06-09 21:49:12.280427"], ["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 113ms (Views: 2.2ms | ActiveRecord: 8.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:13 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "cvNoPU0cZQheEsQgy9Sm3g"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_c_ONX3_OVOm_tBrVSoiWA"], ["updated_at", "2018-06-09 21:49:13.264172"], ["id", 10]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:18 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"awesomealfred", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "awesomealfred"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CMAr7OnN5ijyT4ojznkEGQ"], ["updated_at", "2018-06-09 21:49:18.351140"], ["id", 9]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 86ms (Views: 2.0ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:19 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CMAr7OnN5ijyT4ojznkEGQ"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "epfANlP0kZbR53BPjz3NoQ"], ["updated_at", "2018-06-09 21:49:19.675712"], ["id", 9]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 27ms (Views: 0.7ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:21 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:21 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XAJSmt_v2ZIvqf79tauNeg"], ["updated_at", "2018-06-09 21:49:21.453302"], ["id", 10]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 133ms (Views: 2.3ms | ActiveRecord: 12.8ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:22 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XAJSmt_v2ZIvqf79tauNeg"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_Tq1_SJNaGk_wYzizMb7DA"], ["updated_at", "2018-06-09 21:49:22.891149"], ["id", 10]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 22ms (Views: 0.7ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:36 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:36 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_3QoKn2kwlTKB7rFowGVnA"], ["updated_at", "2018-06-09 21:49:36.564228"], ["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.7ms)
+Completed 200 OK in 117ms (Views: 1.9ms | ActiveRecord: 24.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:38 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_3QoKn2kwlTKB7rFowGVnA"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Bmv84btYnFZlxTtk2iCGmg"], ["updated_at", "2018-06-09 21:49:38.932768"], ["id", 10]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:39 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 14:49:39 -0700
+Processing by Api::SessionsController#create as JSON
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JHliwtw6adcU0EWbrfmV3g"], ["updated_at", "2018-06-09 21:49:39.848912"], ["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 156ms (Views: 2.5ms | ActiveRecord: 13.4ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-06-09 14:49:43 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JHliwtw6adcU0EWbrfmV3g"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0mULZUAUgPuoxJ3TMKbe8w"], ["updated_at", "2018-06-09 21:49:43.943058"], ["id", 10]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 14:49:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+

@@ -27,7 +27,6 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splashPage">
-
         <h2>
           <div id='splash-small-icon'></div>
           <div id='caption1'> Split expenses with friends. </div>

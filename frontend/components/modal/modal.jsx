@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
+import SearchFormContainer from '../search/search_form_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -11,6 +12,9 @@ function Modal({modal, closeModal}) {
   switch (modal) {
     case 'login':
       component = <LoginFormContainer />;
+      break;
+    case 'search':
+      component = <SearchFormContainer />;
       break;
     default:
       return null;

@@ -5,7 +5,8 @@ import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import SplashContainer from './session_form/splash_container';
 import DemoContainer from './session_form/demo_container';
-import SearchContainer from './search/search_container';
+import SearchFormContainer from './search/search_form_container';
+import DashboardContainer from './dashboard/dashboard_container';
 import Modal from './modal/modal';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -16,15 +17,16 @@ const App = () => (
       <Link to="/" className='logo_title'>
           LOOTRIFY
       </Link>
- 
+
       <GreetingContainer />
     </header>
     <Switch>
       <AuthRoute exact path='/' component={SplashContainer} />
       <AuthRoute exact path='/login' component={SplashContainer} />
       <AuthRoute path='/signup' component={SignUpFormContainer} />
-      <AuthRoute path='/demo' component={DemoContainer} />
-      <AuthRoute path='/users/search' component={SearchContainer} />
+      <Route path='/demo' component={DemoContainer} />
+      <ProtectedRoute path='/dashboard' component={DashboardContainer} />
+      <ProtectedRoute path='/search/users' component={SearchFormContainer} />
     </Switch>
   </div>
 );
