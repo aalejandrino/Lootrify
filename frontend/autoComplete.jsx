@@ -12,7 +12,11 @@ export default class AutoComplete entends React.Component {
   }
 
   handleInput(event) {
-  this.setState({inputVal: event.currentTarget.value});
+  this.setState({inputVal: event.currentTarget.value}, () => {
+    // do anything you want here
+    //query db here
+  });
+  //
 }
 
   matches() {
