@@ -24,7 +24,7 @@
   text-shadow: 0 -0.5px grey;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
   padding: 20px 50px;
 }
 
@@ -75,7 +75,7 @@
 }
 
 #splash-mascot{
-  background-image: image-url('splash_mascot.jpg');
+  background-image: image-url('welcome_mascot2.png');
   background-size: cover;
   position: relative;
   display: block;
@@ -83,8 +83,8 @@
   width: 250px;
   height: 100%;
   background-color: transparent;
-  border-radius: 20px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  // border-radius: 20px;
+  // box-shadow: 0 0 5px rgba(0,0,0,0.5);
   margin-left: 15px;
 }
 

@@ -43,13 +43,19 @@
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
+/* all */
+::-webkit-input-placeholder { color:lightgrey; }
+::-moz-placeholder { color:lightgrey; } /* firefox 19+ */
+:-ms-input-placeholder { color:lightgrey; } /* ie */
+input:-moz-placeholder { color:lightgrey; }
+
 .signin-inputs input {
   width: 295px;
   height: 28px;
   z-index: 98;
   border: 1px solid #ccc;
   border-radius: 3px;
-  color: darkgrey;
+  color: black;
 }
 
 #signin-inputs h3 {
@@ -120,10 +126,10 @@
   width: 152px;
   height: 52px;
   color: #fff;
-  background: #ff5216;
+  background: #ff652f;
   text-shadow: 0 -0.5px grey;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+  border-color: #FF883B;
   padding: 11px 15px;
 }

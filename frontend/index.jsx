@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { signup } from './util/session_api_util';
+import { searchUsers, searchUser } from './util/search_api_util';
 import { login } from './actions/session_actions';
 import configureStore from './store/store';
 import Root from './components/root.jsx';
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.signup = signup;
   window.login = login;
+  window.searchUsers = searchUsers;
   // window.logout = logout;
 
 

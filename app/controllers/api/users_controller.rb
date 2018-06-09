@@ -17,6 +17,12 @@ class Api::UsersController < ApplicationController
 
     render :show
   end
+ 
+  def search
+    @users = User.search(params[:query])
+
+    render json: 'api/users/index'
+  end
 
   def user_params
     params.require(:user).permit(:user_name, :password, :email)

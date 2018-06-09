@@ -5,6 +5,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import SplashContainer from './session_form/splash_container';
 import DemoContainer from './session_form/demo_container';
+import SearchContainer from './search/search_container';
 import Modal from './modal/modal';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -23,6 +24,7 @@ const App = () => (
       <AuthRoute exact path='/login' component={SplashContainer} />
       <AuthRoute path='/signup' component={SignUpFormContainer} />
       <AuthRoute path='/demo' component={DemoContainer} />
+      <AuthRoute path='/users/search' component={SearchContainer} />
     </Switch>
   </div>
 );

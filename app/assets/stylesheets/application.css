@@ -113,9 +113,22 @@ h3 {
   text-shadow: 0 -0.5px grey;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
+  border-color: #FF883B;
   padding: 6px 10px 6px 10px;
   margin: 10px;
+}
+
+.header-logout {
+  vertical-align: baseline;
+  font-size: 12px;
+  color: #fff;
+  background: #ff652f;
+
+  text-decoration: none;
+  border-radius: 5px;
+  border-color: #FF883B;
+  padding: 6px 10px 6px 10px;
+  margin-left: 20px;
 }
 
 
@@ -129,4 +142,16 @@ h3 {
   color: #fff;
   text-decoration: none;
 
+}
+
+.btn-orange:hover {
+  cursor: pointer;
+  border-color: #FF883B;
+  background-color: #ff5216;
+}
+
+.btn-teal:hover {
+  cursor: pointer;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  background-color: #318970;
 }

@@ -39,14 +39,16 @@ class Splash extends React.Component {
         </div>
 
         <div className='splash-pics'>
-          <div id='splash-cover'></div>
+          <a target="_blank" id='splash-cover' href="https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/homepage/dashboard-e383c7314a2035b8d43b18ab3898f18c37ddf2d082a2a8c88d364b9d4b6e6b4a.png">
+            <div ></div>
+          </a>
           <div id='splash-mascot'></div>
         </div>
 
         <div>
           {/*<Link to="/demo" className="demoBtn">Demo Login !</Link>*/}
           <form onSubmit={ () => this.props.processForm(this.handleSubmit)}>
-            <input className='demoBtn' type='submit' value='Demo Login !'/>
+            <input className='demoBtn btn-orange' type='submit' value='Demo Login !'/>
           </form>
         </div>
 

@@ -9,8 +9,8 @@ class LoginSessionForm extends React.Component {
 
     // this.state = props.user;
     this.state = {
-      user_name: 'User Name',
-      password: 'Password',
+      user_name: '',
+      password: '',
       email: '',
     }
 
@@ -36,7 +36,10 @@ class LoginSessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.clearState();
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user);
+
+    this.props.closeModal;
+
   };
 
   renderErrors() {
@@ -54,22 +57,28 @@ class LoginSessionForm extends React.Component {
   render() {
     return (
       <div className="modalSessionForm">
-        <h3>Sign In</h3>
-
-        {this.renderErrors()}
-
         <form className="signin-form-box" onSubmit={this.handleSubmit}>
 
           <div id='signin-inputs'>
 
             <div className='signin-inputs'>
               <div>
-                <input onChange={this.update('user_name')} type="text" value={this.state.user_name}/>
+                <input
+                  onChange={this.update('user_name')}
+                  type="text"
+                  value={`${this.state.user_name}`}
+                  placeholder="User Name"
+                  />
               </div>
               <br></br>
 
               <div>
-                <input onChange={this.update('password')} type="password" value={this.state.password}/>
+                <input
+                  onChange={this.update('password')}
+                  type="password"
+                  value={`${this.state.password}`}
+                  placeholder="Password"
+                  />
               </div>
               <br></br>
 
@@ -81,9 +90,11 @@ class LoginSessionForm extends React.Component {
             </h3>
             <br></br>
 
-            <input className='modalSubmitBtn' type='submit' value={this.props.formType}/>
+            <input className='modalSubmitBtn btn-teal' type='submit' value={this.props.formType}/>
           </div>
         </form>
+
+        {this.renderErrors()}
 
       </div>
     );

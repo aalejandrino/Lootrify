@@ -12,7 +12,7 @@ import Greeting from './greeting';
 
 const mapStateToProps = (state) => ({
   currentUser: state.entities.users[state.session.id],
-  isOpen: Boolean(state.modal)
+  isOpen: Boolean(state.ui.modal)
 })
 
 const mapDispatchToProps = dispatch => ({

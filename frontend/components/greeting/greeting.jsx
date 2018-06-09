@@ -30,7 +30,7 @@ const Greeting = (props) => {
     <hgroup className="header-group">
       <div id='profile-pic'></div>
       <h2 className="header-name">{currentUser.user_name}</h2>
-      <button className="header-button" onClick={ () => logout()}>Log Out</button>
+      <button className="header-logout btn" onClick={ () => logout()}>Log Out</button>
     </hgroup>
   );
 

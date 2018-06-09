@@ -15,6 +15,11 @@ class User < ApplicationRecord
     user && user.valid_password?(password) ? user : nil
   end
 
+  def self.search(query)
+    users = User.where("user_name LIKE '#{query}%'")
+
+  end
+
   def valid_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
