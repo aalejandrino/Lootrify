@@ -8,9 +8,10 @@ class Api::FriendsController < ApplicationController
     @friend = Friend.new(friend_params)
 
     if @friend.save
-
+      # render `api/friends`
+     render `api/friends/#{@friend.id}`
     else
-
+      render json: @friend.errors.full_messages, status: 422
     end
   end
 

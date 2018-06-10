@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180610063220) do
   create_table "friends", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "friend_id", null: false
-    t.index ["user_id"], name: "index_friends_on_user_id"
+    t.index ["user_id", "friend_id"], name: "index_friends_on_user_id_and_friend_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
