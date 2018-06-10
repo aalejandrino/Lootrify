@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import { searchUsers } from '../../actions/search_actions';
+import { searchUsers, searchUser } from '../../actions/search_actions';
 import SearchForm from './search_form';
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   openModal: modal => dispatch(openModal(modal)),
   closeModal: () => dispatch(closeModal()),
-  searchUsers: (query) => dispatch(searchUsers(query))
+  searchUsers: (query) => dispatch(searchUsers(query)),
+  searchUser: (id) => dispatch(searchUser(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);

@@ -21,6 +21,10 @@ class SearchForm extends React.Component {
     }
   }
 
+  handleSubmit() {
+
+  }
+
   handleInput(e) {
     this.setState({search: e.currentTarget.value}, () => {
 
@@ -30,7 +34,6 @@ class SearchForm extends React.Component {
 
   selectName(e) {
     let name = e.currentTarget.firstChild.data;
-    debugger
     this.setState({search: name});
   }
 
@@ -80,7 +83,7 @@ class SearchForm extends React.Component {
           <textarea placeholder="Include an optional message"></textarea>
           <br></br>
 
-          <button className="friend-form-btn btn">Send Invites and Add Friends</button>
+          <button className="friend-form-btn btn" onClick={this.handleSubmit.bind(this)}>Send Invites and Add Friends</button>
         </form>
 
 

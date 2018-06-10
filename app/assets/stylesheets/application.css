@@ -152,13 +152,15 @@ h3 {
 }
 
 .btn-orange:hover {
-  cursor: pointer;
   border-color: #FF883B;
   background-color: #ff5216;
 }
 
 .btn-teal:hover {
-  cursor: pointer;
   border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
   background-color: #318970;
+}
+
+.btn {
+  cursor: pointer;
 }

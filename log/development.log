@@ -51663,3 +51663,810 @@ Processing by Api::SearchController#users as JSON
 Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 2.4ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "alfred"], ["email", "alfred@alfred.com"], ["password_digest", "$2a$10$MiEopbQuoBpobHtETH44Du8IXyZui50JpY5h.z6HYG38wzrJAnKQe"], ["session_token", "4-L0dzMpNsBRyQhZ5VQN2g"], ["created_at", "2018-06-10 06:26:51.022100"], ["updated_at", "2018-06-10 06:26:51.022100"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "demoUser"], ["email", "demoUser@lootrify.com"], ["password_digest", "$2a$10$jNe/JP6PbECgzuqyR1iK0ecr5MSG.9LyIyqm7uWkzLHrxM5T5.I16"], ["session_token", "R7kV7UtmtoYZ7KJExgqJEg"], ["created_at", "2018-06-10 06:26:51.083256"], ["updated_at", "2018-06-10 06:26:51.083256"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-1"], ["email", "friend1@lootrify.com"], ["password_digest", "$2a$10$wXzpAUE5BSsRKOXF8vHiKuQVbyzINrrGQw/8u6wImXzF/5OuHr6RS"], ["session_token", "w_WprEVazacFsJaP9ncYrQ"], ["created_at", "2018-06-10 06:26:51.141056"], ["updated_at", "2018-06-10 06:26:51.141056"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-2"], ["email", "friend2@lootrify.com"], ["password_digest", "$2a$10$Vdoz2/fZBzwYKC5tjzGNMOEy4C9oorD0LXCJPzIxyeT39xyJeGd9S"], ["session_token", "FK8ldLCeRadwLZTMSP6Ikw"], ["created_at", "2018-06-10 06:26:51.198509"], ["updated_at", "2018-06-10 06:26:51.198509"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-3"], ["email", "friend3@lootrify.com"], ["password_digest", "$2a$10$Adaod5pgZoTmcvb.niIk..R5Mt7iqzXRVAWlEuPpSlmP9SFeml2Pm"], ["session_token", "R4osk2zqcwP7GnU7GaCrtA"], ["created_at", "2018-06-10 06:26:51.255576"], ["updated_at", "2018-06-10 06:26:51.255576"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-4"], ["email", "friend4@lootrify.com"], ["password_digest", "$2a$10$nuiw6TrcSdDOFCD4h7Rsvugv6AJyET2PGXCsxThlmDpFbZG.RB1pm"], ["session_token", "CAFCxiE23PSOpIUX8bvzVw"], ["created_at", "2018-06-10 06:26:51.326654"], ["updated_at", "2018-06-10 06:26:51.326654"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-5"], ["email", "friend5@lootrify.com"], ["password_digest", "$2a$10$A4uh1usI9QtNVZv2dT2l/.8aMs55YlIUFRVt.z1qD5PGKd2SdSeUC"], ["session_token", "BYBX0VOoLDfA_tT5aS6lMw"], ["created_at", "2018-06-10 06:26:51.384219"], ["updated_at", "2018-06-10 06:26:51.384219"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2018-06-09 23:27:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "i0Sguy1gc_LWQS1aoJA1ig"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 23:27:24 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 23:27:24 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "w5w5JOXmW0Cu5RWAdeWCfQ"], ["updated_at", "2018-06-10 06:27:24.673181"], ["id", 14]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 77ms (Views: 2.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:27:26 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/index.json.jbuilder (39.5ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/search/users?query=a" for 127.0.0.1 at 2018-06-09 23:27:28 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"a"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'a%')[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/index.json.jbuilder (5.2ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:27:29 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/index.json.jbuilder (11.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/search/users?query=f" for 127.0.0.1 at 2018-06-09 23:27:31 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"f"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'f%')[0m
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/index.json.jbuilder (12.8ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/search/users?query=fr" for 127.0.0.1 at 2018-06-09 23:27:33 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"fr"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'fr%')[0m
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/index.json.jbuilder (9.2ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/search/users?query=f" for 127.0.0.1 at 2018-06-09 23:27:33 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"f"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'f%')[0m
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/index.json.jbuilder (18.5ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:27:34 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/index.json.jbuilder (36.9ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:27:35 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/index.json.jbuilder (9.9ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5023.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Lootrify_development"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (125.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Lootrify_development"[0m
+  [1m[35m (113.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Lootrify_test"[0m
+  [1m[35m (339.4ms)[0m  [1m[35mCREATE DATABASE "Lootrify_development" ENCODING = 'unicode'[0m
+  [1m[35m (275.8ms)[0m  [1m[35mCREATE DATABASE "Lootrify_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "user_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying, "img_url" character varying, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_user_name" ON "users"  ("user_name")[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180607012042)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180605232139);
+
+[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-10 06:30:04.224003"], ["updated_at", "2018-06-10 06:30:04.224003"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "user_name" character varying NOT NULL, "email" character varying NOT NULL, "phone" character varying, "img_url" character varying, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_user_name" ON "users"  ("user_name")[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180607012042)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180605232139);
+
+[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-10 06:30:04.348860"], ["updated_at", "2018-06-10 06:30:04.348860"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-10 06:30:04.358307"], ["key", "environment"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "alfred"], ["email", "alfred@alfred.com"], ["password_digest", "$2a$10$sxGF0s/ZsAlXCkp64MJ.VutjpYAOLAR7vbq0tmy7rX1SI.9Yigo4y"], ["session_token", "CL4N7lOnP6BXdY07fa9K2A"], ["created_at", "2018-06-10 06:30:04.455400"], ["updated_at", "2018-06-10 06:30:04.455400"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "demoUser"], ["email", "demoUser@lootrify.com"], ["password_digest", "$2a$10$WdQji2hO7YBsAeq0IMcz0O2OQDYP7t978phIEtWI6m2ajnOGB.Toi"], ["session_token", "Ghz6SB5IQLtayVi1igusFw"], ["created_at", "2018-06-10 06:30:04.510835"], ["updated_at", "2018-06-10 06:30:04.510835"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-1"], ["email", "friend1@lootrify.com"], ["password_digest", "$2a$10$j/ii/BYAT1PAQwAoF5GtKePtgpobpQozjZnlzi9xZvmcNJLD59B.K"], ["session_token", "ayVk71uokklIK6rQkjbu_A"], ["created_at", "2018-06-10 06:30:04.566493"], ["updated_at", "2018-06-10 06:30:04.566493"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-2"], ["email", "friend2@lootrify.com"], ["password_digest", "$2a$10$8tK0mqS/PCvC6iR2wRgAWOUHIJ.eux2uiN2EPYK.o2M..lnVlCVXu"], ["session_token", "9wLmQ09jNA-mIAd2A4CD3w"], ["created_at", "2018-06-10 06:30:04.621908"], ["updated_at", "2018-06-10 06:30:04.621908"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-3"], ["email", "friend3@lootrify.com"], ["password_digest", "$2a$10$uNOnVUgK0685ntNPE8.Kae.AW8KCUlHH0r1DdZfl26MWglaFbRS5O"], ["session_token", "49gduIbcd8vWfIF3gNoUlw"], ["created_at", "2018-06-10 06:30:04.677251"], ["updated_at", "2018-06-10 06:30:04.677251"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-4"], ["email", "friend4@lootrify.com"], ["password_digest", "$2a$10$HSJ568TM/vtwhFBYXjB4zepQHs3zxpk21431Cf8OGLrkq2XCfVs5e"], ["session_token", "fho7p-wNEyYenTgOCjVXmA"], ["created_at", "2018-06-10 06:30:04.733153"], ["updated_at", "2018-06-10 06:30:04.733153"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "friend-5"], ["email", "friend5@lootrify.com"], ["password_digest", "$2a$10$QvmtaHGoToG24Nj2Gwf71.htdVJWimbEkYwvr6gH1cMHKSb0zG/ri"], ["session_token", "IIc5u0TdLBkVgLNSSNknxw"], ["created_at", "2018-06-10 06:30:04.788852"], ["updated_at", "2018-06-10 06:30:04.788852"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(251209128637665240)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFriends (20180610063220)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "friends" ("id" bigserial primary key, "user_id" integer NOT NULL, "friend_id" integer NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_friends_on_user_id" ON "friends"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180610063220"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(251209128637665240)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+Started GET "/" for 127.0.0.1 at 2018-06-09 23:47:10 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "w5w5JOXmW0Cu5RWAdeWCfQ"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 1079ms (Views: 1075.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 23:47:14 -0700
+Started POST "/api/session" for 127.0.0.1 at 2018-06-09 23:47:14 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"user_name"=>"demoUser", "password"=>"[FILTERED]"}}
+  Parameters: {"user"=>"undefined"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/api/sessions_controller.rb:9:in `create'
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "demoUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mS-kMfPS-J9vK3xIrY3Hlg"], ["updated_at", "2018-06-10 06:47:14.393785"], ["id", 2]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 93ms (Views: 3.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:47:17 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.0ms)
+  Rendered api/users/index.json.jbuilder (5.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 23:49:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mS-kMfPS-J9vK3xIrY3Hlg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 352ms (Views: 349.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:53:02 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (11.6ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-09 23:55:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mS-kMfPS-J9vK3xIrY3Hlg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 504ms (Views: 501.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/search/users?query=" for 127.0.0.1 at 2018-06-09 23:55:49 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>""}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (30.0ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2018-06-10 00:04:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mS-kMfPS-J9vK3xIrY3Hlg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 519ms (Views: 511.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:04:57 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/6e4e7ca0d1b9660e/variables" for 127.0.0.1 at 2018-06-10 00:04:57 -0700
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:05:13 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/1056bf486dea0ae5/variables" for 127.0.0.1 at 2018-06-10 00:05:13 -0700
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:05:14 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/33da5d6302fdede2/variables" for 127.0.0.1 at 2018-06-10 00:05:14 -0700
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:05:15 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/290fe9785d11a747/variables" for 127.0.0.1 at 2018-06-10 00:05:15 -0700
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:06:04 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/97ef6b9de3681ffc/variables" for 127.0.0.1 at 2018-06-10 00:06:04 -0700
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:06:26 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/friends/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/adobofrenzy/Documents/Lootrify/app/views"
+:
+  app/controllers/api/friends_controller.rb:20:in `show'
+
+Started POST "/__better_errors/0f7f6e2f8da7d536/variables" for 127.0.0.1 at 2018-06-10 00:06:26 -0700
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:07:47 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/friends/show.json.jbuilder
+  Rendered api/friends/show.json.jbuilder (4.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/friends/show.json.jbuilder:1:in `_app_views_api_friends_show_json_jbuilder__1705769783845629647_70183077752840'
+  app/controllers/api/friends_controller.rb:20:in `show'
+
+Started POST "/__better_errors/6aef443337b08093/variables" for 127.0.0.1 at 2018-06-10 00:07:48 -0700
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "friends" ("user_id", "friend_id") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["friend_id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFriend Load (0.8ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:09:27 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/friends/show.json.jbuilder
+  Rendered api/friends/show.json.jbuilder (6.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/friends/show.json.jbuilder:1:in `_app_views_api_friends_show_json_jbuilder__1705769783845629647_70183086817700'
+  app/controllers/api/friends_controller.rb:20:in `show'
+
+Started POST "/__better_errors/2785c29ec219053f/variables" for 127.0.0.1 at 2018-06-10 00:09:27 -0700
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:09:37 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/friends/show.json.jbuilder
+  Rendered api/friends/show.json.jbuilder (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/friends/show.json.jbuilder:1:in `_app_views_api_friends_show_json_jbuilder__1705769783845629647_70183085601740'
+  app/controllers/api/friends_controller.rb:20:in `show'
+
+Started POST "/__better_errors/7e1f00d40e3fb136/variables" for 127.0.0.1 at 2018-06-10 00:09:37 -0700
+Started POST "/__better_errors/7e1f00d40e3fb136/variables" for 127.0.0.1 at 2018-06-10 00:09:41 -0700
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:09:55 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/be6cbabbc0913a1c/variables" for 127.0.0.1 at 2018-06-10 00:09:56 -0700
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:12:50 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/e6af1a86a8ab8a0e/variables" for 127.0.0.1 at 2018-06-10 00:12:51 -0700
+Started GET "/api/friends" for 127.0.0.1 at 2018-06-10 00:12:53 -0700
+Processing by Api::FriendsController#index as JSON
+  Rendering api/friends/index.json.jbuilder
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered api/friends/index.json.jbuilder (12.1ms)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2018-06-10 00:13:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/search/users" for 127.0.0.1 at 2018-06-10 00:13:24 -0700
+Processing by Api::SearchController#users as JSON
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/index.json.jbuilder (25.5ms)
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2018-06-10 00:13:47 -0700
+Processing by Api::FriendsController#index as JSON
+  Rendering api/friends/index.json.jbuilder
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered api/friends/index.json.jbuilder (1.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2018-06-10 00:14:27 -0700
+Processing by Api::FriendsController#index as JSON
+  Rendering api/friends/index.json.jbuilder
+  [1m[36mFriend Load (0.9ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered api/friends/index.json.jbuilder (5.2ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/search/users" for 127.0.0.1 at 2018-06-10 00:14:43 -0700
+Processing by Api::SearchController#users as JSON
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE '%')[0m
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (33.1ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/friends" for 127.0.0.1 at 2018-06-10 00:16:25 -0700
+Processing by Api::FriendsController#index as JSON
+  Rendering api/friends/index.json.jbuilder
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered api/friends/index.json.jbuilder (10.8ms)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:16:28 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/57f660d8727c9833/variables" for 127.0.0.1 at 2018-06-10 00:16:28 -0700
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:17:54 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/8af84bf4716dcfb6/variables" for 127.0.0.1 at 2018-06-10 00:17:54 -0700
+Started GET "/api/friends" for 127.0.0.1 at 2018-06-10 00:17:57 -0700
+Processing by Api::FriendsController#index as JSON
+  Rendering api/friends/index.json.jbuilder
+  [1m[36mFriend Load (1.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered api/friends/index.json.jbuilder (35.7ms)
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/api/friends/2" for 127.0.0.1 at 2018-06-10 00:18:02 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/api/friends_controller.rb:18:in `show'
+
+Started POST "/__better_errors/40095e0374452076/variables" for 127.0.0.1 at 2018-06-10 00:18:02 -0700
+Started GET "/api/users/6" for 127.0.0.1 at 2018-06-10 00:18:11 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered api/users/show.json.jbuilder (4.6ms)
+Completed 200 OK in 52ms (Views: 8.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2018-06-10 00:18:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/friends/1" for 127.0.0.1 at 2018-06-10 00:18:49 -0700
+Processing by Api::FriendsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" WHERE "friends"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/friends/show.json.jbuilder
+  Rendered api/friends/show.json.jbuilder (0.8ms)
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/search/users?query=alfred" for 127.0.0.1 at 2018-06-10 00:25:21 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"alfred"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'alfred%')[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/index.json.jbuilder (31.6ms)
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/api/search/users?query=f" for 127.0.0.1 at 2018-06-10 00:25:21 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"f"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'f%')[0m
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (15.4ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/search/users?query=fr" for 127.0.0.1 at 2018-06-10 00:25:22 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"fr"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'fr%')[0m
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/index.json.jbuilder (6.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/search/users?query=fri" for 127.0.0.1 at 2018-06-10 00:25:22 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"fri"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'fri%')[0m
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (14.8ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/search/users?query=frie" for 127.0.0.1 at 2018-06-10 00:25:22 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"frie"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'frie%')[0m
+  Rendered api/users/_user.json.jbuilder (3.9ms)
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/index.json.jbuilder (37.2ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/search/users?query=frien" for 127.0.0.1 at 2018-06-10 00:25:22 -0700
+Processing by Api::SearchController#users as JSON
+  Parameters: {"query"=>"frien"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (user_name LIKE 'frien%')[0m
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/index.json.jbuilder (11.6ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
