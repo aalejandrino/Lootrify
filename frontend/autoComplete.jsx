@@ -39,6 +39,11 @@ export default class AutoComplete entends React.Component {
     return matches;
   };
 
+  selectName(event) {
+    let name = event.currentTarget.innerText;
+    this.setState({inputVal: name});
+  }
+
   render() {
   let results = this.matches().map((result, i) => {
     return (

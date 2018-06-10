@@ -7,7 +7,8 @@ import SearchForm from './search_form';
 const mapStateToProps = (state, ownProps) => {
 
   return ({
-    users: 'hi'//Object.values(state.entities.search.users)
+    isOpen: Boolean(state.ui.modal),
+    users: Object.values(state.entities.search)
   })
 }
 

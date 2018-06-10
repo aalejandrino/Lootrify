@@ -3,7 +3,7 @@ import * as SearchAPIUtil from '../util/search_api_util.js';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
 export const RECEIVE_USER = 'RECEIVE_USER';
 
-const receiverUsers = (users) => ({
+const receiveUsers = (users) => ({
   type: RECEIVE_USERS,
   users
 });
