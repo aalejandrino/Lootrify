@@ -22,6 +22,7 @@ class Splash extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.closeModal();
     this.props.processForm(user);
+
   }
 
   render() {

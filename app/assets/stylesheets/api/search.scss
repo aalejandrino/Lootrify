@@ -1,3 +1,66 @@
 // Place all the styles related to the api/searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.friend-search-form {
+  width: 560px;
+  height: 280px;
+  background-color: white;
+  background-clip: padding-box;
+  text-align: center;
+  z-index: 1050;
+  margin: auto;
+  padding: 20px 25px;
+  color: #333;
+  text-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+
+// keeps modal centered
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 50.25%;
+  transform: translate(-50%, -50%);
+// ---------------------
+}
+
+.friend-search-form h3 {
+  margin-top: 10px;
+  display: inline-flex;
+}
+
+.friend-search-form h3 span {
+  position: relative;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+  background-image: url('https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbit/logo-d23d9f9f3a93162ac760371c8e22fea7e14a9d8491b477e7925e551b14172ada.png');
+  background-size: cover;
+  background-color: transparent;
+}
+
+#friend-form-title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+#friend-form-title > div {
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: lightgrey;
+}
+
+#add-friends:hover {
+  color: #5bc5a7;
+  cursor: pointer;
+}

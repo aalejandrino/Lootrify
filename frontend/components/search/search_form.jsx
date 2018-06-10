@@ -17,23 +17,28 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>SEARCH FORM HERE</h1>
+      <div className="friend-search-form">
+        <div id="friend-form-title">
+          <h3>
+            <span>
+            </span>
+            <div>
+              Invite friends
+            </div>
+          </h3>
+
+          <div>
+            X
+          </div>
+        </div>
         <br></br>
 
         <form>
           <input type="text" />
-
-          <button>hello</button>
+          <textarea placeholder="Include an optional message"></textarea>
         </form>
 
-        <h4>
-          {
-            this.state.map((user) => (
-              user.user_name
-            ))
-          }
-        </h4>
+        <button>search for friend</button>
       </div>
     )
   }

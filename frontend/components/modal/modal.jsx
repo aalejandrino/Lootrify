@@ -13,7 +13,7 @@ function Modal({modal, closeModal}) {
     case 'login':
       component = <LoginFormContainer />;
       break;
-    case 'search':
+    case 'addFriend':
       component = <SearchFormContainer />;
       break;
     default:
@@ -30,7 +30,7 @@ function Modal({modal, closeModal}) {
 
 const mapStateToProps = state => {
   return {
-    modal: state.modal
+    modal: state.ui.modal
   };
 };
 

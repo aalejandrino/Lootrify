@@ -11,7 +11,7 @@ import Modal from './modal/modal';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div id="app">
     <Modal />
     <header className='top_nav'>
       <Link to="/" className='logo_title'>

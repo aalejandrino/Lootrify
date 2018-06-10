@@ -7,7 +7,7 @@ import SearchForm from './search_form';
 const mapStateToProps = (state, ownProps) => {
 
   return ({
-    users: Object.values(state.entities.search.users)
+    users: 'hi'//Object.values(state.entities.search.users)
   })
 }
 

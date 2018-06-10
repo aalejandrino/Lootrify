@@ -8,9 +8,10 @@ const Greeting = (props) => {
   let logout = props.logout;
   let openModal = props.openModal;
   let closeModal = props.closeModal;
+  let isOpen = props.isOpen;
 
   const handleClick = () => {
-    if (props.isOpen) {
+    if (isOpen) {
       closeModal()
     } else {
       openModal('login')
