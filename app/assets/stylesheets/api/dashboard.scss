@@ -89,6 +89,74 @@
   font-size: 12px;
 }
 
+#user-show {
+  top: 150px;
+  height: 40px;
+  width:100%;
+  background-color: #eee;
+  padding: 13px 0px 10px 0px;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+#profile-pic-2 {
+  background-image: image-url('default_pic.jpg');
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 5px;
+  border-radius: 18px;
+  border: 1px solid lightgrey;
+}
+
+
+#friend-name {
+  height: 34px;
+  width: auto;
+  position: relative;
+  margin-left: 25px;
+  text-align: center;
+  display: flex;
+}
+
+#friend-name h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+}
+
+
+#user-show-btns button {
+  background-color: #48be9d;
+  width: 80px;
+  height: 30px;
+  color: white;
+  // padding: 8px 20px;
+  margin-right: 12px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 6px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  white-space: nowrap;
+
+}
+
+#user-show-btns > button:first-child {
+  background-color: #ff652f;
+}
+
+#user-show-btns button:hover {
+  cursor: pointer;
+}
+
 .centerColumn {
   // background-color: lightgrey;
   border-left: 1px solid #ccc;

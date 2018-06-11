@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import DashboardFriendItem from './dashboard_friend_item.jsx'
 
 class Dashboard extends React.Component {
 
@@ -14,7 +15,7 @@ class Dashboard extends React.Component {
 
     window.scrollTo(0, 0)
 
-    this.state = props.user;
+    this.state = {selectedFriend: ''};
     let openModal = props.openModal;
     let closeModal = props.closeModal;
     let isOpen = props.isOpen;
@@ -28,10 +29,19 @@ class Dashboard extends React.Component {
     }
   };
 
+  selectFriend(user) {
+    return (e) => {
+      this.setState({selectedFriend: user});
+    }
+  }
+
   render() {
+
+
     return(
     <div className='center_container'>
       <div className="centerBars">
+
         <div className="leftSideBar">
           <ul>
             <div id="leftSide-1">
@@ -81,9 +91,9 @@ class Dashboard extends React.Component {
                            return (
                                <li
                                  key={user.id}
-                                 onClick={"hello"}
+                                 onClick={this.selectFriend(user).bind(this)}
                                  >
-                                 <i class="fas fa-user"></i>
+                                 <i className="fas fa-user"></i>
                                  <div>
                                    {user.user_name}
                                  </div>
@@ -92,14 +102,19 @@ class Dashboard extends React.Component {
                         }})
                     }
                   </ul>
-
-
-
               </div>
             </div>
           </ul>
         </div>
-        <div className="centerColumn"></div>
+
+
+        <div className="centerColumn">
+
+          <DashboardFriendItem user={this.state.selectedFriend} />
+
+        </div>
+
+
         <div className="rightSideBar"></div>
       </div>
 
