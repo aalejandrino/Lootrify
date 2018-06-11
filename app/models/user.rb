@@ -1,13 +1,35 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint(8)        not null, primary key
+#  user_name       :string           not null
+#  email           :string           not null
+#  phone           :string
+#  img_url         :string
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
   # validates :user_name, :email, :phone, :img_url, :session_token, :password_digest
   validates :user_name, :email, presence: true
-
-
   validates :password, length: {minimum: 6, allow_nil: true}
 
   attr_reader :password
 
   before_validation :ensure_session_token
+
+  has_many :friendships,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Friend
+
+  has_many :friends,
+  through: :friendships,
+  source: :friend
 
 
   def self.find_by_credentials(username, password)

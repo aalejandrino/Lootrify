@@ -84,6 +84,7 @@ h3 {
 .header-group {
   display: inline-flex;
   align-items: center;
+  left: 150px;
 }
 
 .login-signup {
@@ -141,7 +142,7 @@ h3 {
 
 .logo_title {
   position: relative;
-  right: 50px;
+  right: 100px;
   font-family: Georgia, serif;
   font-size: 22px;
   font-weight: 200;

@@ -4,9 +4,9 @@ export const RECEIVE_FRIENDS = 'RECEIVE_FRIENDS';
 export const RECEIVE_FRIEND = 'RECEIVE_FRIEND';
 export const REMOVE_FRIEND = 'REMOVE_FRIEND';
 
-const receiveFriends = (friends) => ({
+const receiveFriends = (payload) => ({
   type: RECEIVE_FRIENDS,
-  friends
+  payload
 })
 
 const receiveFriend = (friend) => ({
@@ -31,5 +31,10 @@ export const removeFriendship = (id) => dispatch => (
 
 export const fetchFriendships = () => dispatch => (
   FriendAPIUtil.fetchFriendships()
-    .then(friendsRes => dispatch(receiveFriends(friendsRes)))
+    .then(payload => dispatch(receiveFriends(payload)))
+)
+
+export const fetchFriend = (id) => dispatch => (
+  FriendAPIUtil.fetchFriend(id)
+    .then(userRes => dispatch(receiveUser(userRes)))
 )

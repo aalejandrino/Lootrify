@@ -48,13 +48,15 @@ class SearchForm extends React.Component {
 
   render() {
     let results = this.props.users.map((user,i) => {
-      return(
-        <li
-          key={i}
-          onClick={this.selectName(user.id)}>
-          {user.user_name} - ({user.email})
-        </li>
-      )
+      if (this.state.search === user.user_name.slice(0, this.state.search.length)) {
+        return(
+          <li
+            key={i}
+            onClick={this.selectName(user.id)}>
+            {user.user_name} - ({user.email})
+          </li>
+        )
+      }
     })
 
     return (

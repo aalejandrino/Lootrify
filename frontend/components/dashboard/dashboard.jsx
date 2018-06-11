@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 class Dashboard extends React.Component {
 
+  componentDidMount() {
+    this.props.fetchFriendships();
+  }
+
   constructor(props) {
     super(props);
 
@@ -62,12 +66,36 @@ class Dashboard extends React.Component {
               </div>
 
               <li className="friends">
-                <div>FRIENDS</div> 
+                <div>FRIENDS</div>
                 <div id="add-friends" onClick={this.handleClick.bind(this)}>
                   <i className="fa fa-plus" aria-hidden="true"></i>
                    add
                 </div>
               </li>
+
+              <div id="current-friends">
+                <ul>
+                    {this.props.users.map(user => {
+                       if (user.id !== this.props.currentUserId) {
+                           // this.props.searchUser(friend.friend_id); // gives action type errors?
+                           return (
+                               <li
+                                 key={user.id}
+                                 onClick={"hello"}
+                                 >
+                                 <i class="fas fa-user"></i>
+                                 <div>
+                                   {user.user_name}
+                                 </div>
+                               </li>
+                           )
+                        }})
+                    }
+                  </ul>
+
+
+
+              </div>
             </div>
           </ul>
         </div>

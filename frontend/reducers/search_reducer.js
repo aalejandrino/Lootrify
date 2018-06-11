@@ -10,8 +10,8 @@
 
    switch (action.type) {
      case RECEIVE_USERS:
-        return action.users;
-
+        return merge({}, state, action.users);
+        // return action.users;
      case RECEIVE_USER:
         return merge({}, state, {[action.user.id]:action.user});
 

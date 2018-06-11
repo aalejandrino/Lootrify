@@ -5,8 +5,11 @@ const friendReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
+    // case RECEIVE_USER:
+    //   return merge({}, state, action.user.id)
+
     case RECEIVE_FRIENDS:
-      return action.friends;
+      return action.payload.friendships;
 
     case RECEIVE_FRIEND:
       return merge({}, state, {[action.friend.id]:action.friend});
@@ -21,3 +24,5 @@ const friendReducer = (state = {}, action) => {
 
   }
 };
+
+export default friendReducer;

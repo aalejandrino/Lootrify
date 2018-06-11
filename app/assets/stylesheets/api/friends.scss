@@ -1,3 +1,32 @@
 // Place all the styles related to the Api/Friends controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#current-friends {
+  background-color: white;
+  border-bottom: 0px solid white;
+
+}
+
+#current-friends ul {
+  margin-top: 0px;
+
+}
+
+#current-friends > ul li {
+  margin-left: 5px;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+#current-friends > ul li:hover {
+  cursor: pointer;
+  background: #eee;
+  color: #999;
+}
+
+
+
+#current-friends > ul li div {
+  margin-left: 5px;
+}
