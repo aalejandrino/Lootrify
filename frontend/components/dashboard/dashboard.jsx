@@ -62,7 +62,7 @@ class Dashboard extends React.Component {
               </div>
 
               <li className="friends">
-                <div>FRIENDS</div>
+                <div>FRIENDS</div> 
                 <div id="add-friends" onClick={this.handleClick.bind(this)}>
                   <i className="fa fa-plus" aria-hidden="true"></i>
                    add

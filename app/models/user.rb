@@ -17,7 +17,11 @@ class User < ApplicationRecord
 
   def self.search(query)
     users = User.where("user_name LIKE '#{query}%'")
+  end
 
+  def self.find_by_id(id)
+    user = User.find_by(id: id)
+    user
   end
 
   def valid_password?(password)

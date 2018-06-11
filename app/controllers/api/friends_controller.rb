@@ -6,10 +6,11 @@ class Api::FriendsController < ApplicationController
 
   def create
     @friend = Friend.new(friend_params)
+    @user = User.find_by_id(@friend.friend_id)
 
     if @friend.save
-      # render `api/friends`
-     render `api/friends/#{@friend.id}`
+
+      render :show
     else
       render json: @friend.errors.full_messages, status: 422
     end
@@ -17,6 +18,8 @@ class Api::FriendsController < ApplicationController
 
   def show
     @friend = Friend.find(params[:id])
+    @user = User.find_by_id(@friend.friend_id)
+
 
   end
 

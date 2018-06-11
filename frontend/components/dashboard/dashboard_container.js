@@ -3,7 +3,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import Dashboard from './dashboard';
 
 const mapStateToProps = (state, ownProps) => ({
-  hello: state,
   isOpen: Boolean(state.ui.modal)
 });
 

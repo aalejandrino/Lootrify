@@ -1,8 +1,8 @@
-export const createFriendship = id => (
+export const createFriendship = friend => (
   $.ajax({
     method: 'POST',
     url: 'api/friends',
-    id
+    data: { friend }
   })
 )
 
@@ -10,5 +10,12 @@ export const removeFriendship = id => (
   $.ajax({
     method: DELETE,
     url: `api/friends/${id}`
+  })
+)
+
+export const fetchFriendships = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/friends'
   })
 )

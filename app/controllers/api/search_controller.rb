@@ -7,3 +7,4 @@ class Api::SearchController < ApplicationController
   end
 
 end
+ 

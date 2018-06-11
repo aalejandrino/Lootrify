@@ -6,13 +6,14 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {search: ''};
+    this.state = {search: '', friendId: null};
     this.handleInput = this.handleInput.bind(this);
     this.selectName = this.selectName.bind(this);
 
     this.isOpen = props.isOpen;
     this.closeModal = props.closeModal;
     this.searchUsers = props.searchUsers;
+    this.createFriendship = props.createFriendship;
   };
 
   handleClick() {
@@ -22,7 +23,11 @@ class SearchForm extends React.Component {
   }
 
   handleSubmit() {
+    let friendship = {user_id: this.props.currentUserId, friend_id: this.state.friendId};
+    if (this.createFriendship(friendship)) {
 
+      this.closeModal();
+    }
   }
 
   handleInput(e) {
@@ -32,9 +37,13 @@ class SearchForm extends React.Component {
     this.searchUsers(this.state.search);
   };
 
-  selectName(e) {
-    let name = e.currentTarget.firstChild.data;
-    this.setState({search: name});
+  selectName(friendId) {
+
+    return (e) => {
+      let name = e.currentTarget.firstChild.data;
+      this.setState({search: name, friendId});
+
+    };
   }
 
   render() {
@@ -42,7 +51,7 @@ class SearchForm extends React.Component {
       return(
         <li
           key={i}
-          onClick={this.selectName}>
+          onClick={this.selectName(user.id)}>
           {user.user_name} - ({user.email})
         </li>
       )
@@ -83,7 +92,7 @@ class SearchForm extends React.Component {
           <textarea placeholder="Include an optional message"></textarea>
           <br></br>
 
-          <button className="friend-form-btn btn" onClick={this.handleSubmit.bind(this)}>Send Invites and Add Friends</button>
+          <button className="friend-form-btn btn" onClick={this.handleSubmit.bind(this)}>Add Friend</button>
         </form>
 
 
@@ -91,4 +100,5 @@ class SearchForm extends React.Component {
     )
   };
 }
+
 export default withRouter(SearchForm);
