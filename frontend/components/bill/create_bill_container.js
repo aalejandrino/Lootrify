@@ -6,12 +6,13 @@ import CreateBill from './create_bill';
 const mapStateToProps = (state, ownProps) => {
 
   return ({
+    user: state.ui.data, //passed data from modal actions
 
   })
 }
 
 const mapDispatchToProps = dispatch => ({
-  openModal: modal => dispatch(openModal(modal)),
+  openModal: (modal, data) => dispatch(openModal(modal, data)),
   closeModal: () => dispatch(closeModal()),
 
 })

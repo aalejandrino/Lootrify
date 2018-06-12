@@ -25,8 +25,8 @@ class SearchForm extends React.Component {
   handleSubmit() {
     let friendship = {user_id: this.props.currentUserId, friend_id: this.state.friendId};
     if (this.createFriendship(friendship)) {
-
       this.closeModal();
+      window.location.reload();
     }
   }
 
