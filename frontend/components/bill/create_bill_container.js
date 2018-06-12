@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return ({
     user: state.ui.data, //passed data from modal actions
-
+    currentUserId: state.session.id
   })
 }
 

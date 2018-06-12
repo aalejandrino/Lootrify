@@ -5,14 +5,37 @@ class CreateBill extends React.Component {
   constructor(props) {
     super(props);
 
+    let date = new Date();
+    let month = (date.getMonth() + 1) >= 10 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1);
+    let day = date.getDate() >= 10 ? date.getDate() : '0' + date.getDate();
+
+    this.state = {
+      title: '',
+      creator_id: props.currentUserId,
+      total_bill: undefined,
+      date: `${date.getFullYear()}-${month}-${day}`
+    }
+
   }
 
   close() {
     this.props.closeModal();
   }
 
-  render() {
+  handleTitle(e) {
+    this.setState({title: e.currentTarget.value})
+    debugger
+  }
 
+  handleValue(e) {
+    this.setState({total_bill: e.currentTarget.value})
+  }
+
+  handle(content) {
+    return (e) => (this.setState({[content]: e.currentTarget.value}))
+  }
+
+  render() {
 
     return(
       <div className="create-bill-form">
@@ -30,8 +53,40 @@ class CreateBill extends React.Component {
         </div>
 
         <div className="body">
-          
+          <div className="body-1">
+            <div id="body-gift-icon"></div>
+            <div id="body-1-inputs">
+              <input type="text" onChange={this.handle('title')} placeholder="Enter a description" value={this.state.title}></input>
+              <div id="body-1-inputs-num">
+                <a>$</a><input type="number" onChange={this.handle('total_bill')} placeholder="0.00" value={this.state.total_bill}></input>
+              </div>
+            </div>
+          </div>
+          <br></br>
+
+          <div className="body-2">
+            Paid by
+            <strong> you </strong>
+            and split
+            <strong> equally </strong>
+            .
+            <div>(${this.state.total_bill/2 || 0}/person)</div>
+          </div>
+          <br></br>
+
+          <div className="body-3">
+            <input type="date" onChange={this.handle('date')} value={this.state.date}></input>
+          </div>
+          <br></br>
+
         </div>
+
+        <footer className="bill-footer">
+          <div className="footer-btns btn">
+            <button onClick={this.close.bind(this)}>Cancel</button>
+            <button>Save</button>
+          </div>
+        </footer>
       </div>
     )
   }
