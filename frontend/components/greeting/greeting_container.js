@@ -9,7 +9,7 @@ import Greeting from './greeting';
 //   };
 // };
 // from benchbnb
- 
+
 const mapStateToProps = (state) => ({
   currentUser: state.entities.users[state.session.id],
   isOpen: Boolean(state.ui.modal)
@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  openModal: modal => dispatch(openModal(modal)),
+  openModal: (modal, data) => dispatch(openModal(modal, data)),
   closeModal: () => dispatch(closeModal())
 });
 

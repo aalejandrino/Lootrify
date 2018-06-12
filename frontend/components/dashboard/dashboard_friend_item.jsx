@@ -8,7 +8,7 @@ const DashboardFriendItem = (props) => {
       if (props.isOpen) {
         props.closeModal()
       } else {
-        props.openModal('createBill')
+        props.openModal('createBill', props.user)
       }
     }
 
@@ -32,7 +32,7 @@ const DashboardFriendItem = (props) => {
             <ul>
               {Object.values(props.bills.billmemberships).map((bm, i) => {
 
-                if (bm.member_id === props.user.id && ((props.bills.bills)[bm.bill_id]).creator_id === props.currentUserId ) {
+                if (bm.member_id === props.user.id && (((props.bills.bills)[bm.bill_id]).creator_id === props.currentUserId)) {
                   return (
                     <li key={i} className="friend-bill-item">
                       <div id="bill-title-date">

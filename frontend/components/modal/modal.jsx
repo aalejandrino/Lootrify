@@ -5,7 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SearchFormContainer from '../search/search_form_container';
 import CreateBillContainer from '../bill/create_bill_container';
 
-function Modal({modal, closeModal}) {
+function Modal({modal, data, closeModal}) {
   if (!modal) {
     return null;
   }
@@ -18,7 +18,7 @@ function Modal({modal, closeModal}) {
       component = <SearchFormContainer />;
       break;
     case 'createBill':
-      component = <CreateBillContainer />;
+      component = <CreateBillContainer data={data} />;
       break;
     default:
       return null;
@@ -34,7 +34,8 @@ function Modal({modal, closeModal}) {
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    data: state.ui.data
   };
 };
 

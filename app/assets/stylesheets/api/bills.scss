@@ -1,3 +1,74 @@
 // Place all the styles related to the Api/bills controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.create-bill-form {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  background-clip: padding-box;
+  text-align: center;
+  z-index: 1050;
+  margin: auto;
+  color: #333;
+  text-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+
+// keeps modal centered
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 40%;
+    left: 50.25%;
+  transform: translate(-50%, -50%);
+// ---------------------
+}
+
+.create-bill-form header {
+  height: 20px;
+  border-radius: 10px 10px 0px 0px;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #36977b;
+  text-shadow: 0 -1px 0 #318a71;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-bill-form header * {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.withUser .bill-with {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.create-bill-form .withUser {
+  align-items: center;
+  justify-content: flex-start;
+  display: inline-flex;
+  width: 100%;
+  height: 32px;
+  background-color: red;
+  padding: 5px 0;
+}
+
+#bill-user-pic {
+  background-image: image-url('default_pic.jpg');
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  border: 1px solid #3eaf8f;
+}

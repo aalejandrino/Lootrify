@@ -21,6 +21,9 @@ User.create(user_name: 'Sheldon Chan', password: '123456', email: 'friend9@lootr
 User.create(user_name: 'Henry Nguyen', password: '123456', email: 'friend10@lootrify.com')
 User.create(user_name: 'Travis Nguyen', password: '123456', email: 'friend11@lootrify.com')
 User.create(user_name: 'Valerie Sui', password: '123456', email: 'friend12@lootrify.com')
+User.create(user_name: 'Franko Sosa', password: '123456', email: 'friend13@lootrify.com')
+User.create(user_name: 'Andrea Pescetelli', password: '123456', email: 'friend14@lootrify.com')
+
 
 Bill.destroy_all
 Bill.create(title: "Breakfast the Cat's Birthday Bonanza", creator_id: 1, total_bill: 1000, date: "10/10/2018")

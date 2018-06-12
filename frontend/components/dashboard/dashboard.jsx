@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
     if (this.props.isOpen) {
       this.props.closeModal()
     } else {
-      this.props.openModal('addFriend')
+      this.props.openModal('addFriend', '')
     }
   };
 

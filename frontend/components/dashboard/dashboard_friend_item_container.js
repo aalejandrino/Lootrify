@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import DashboardFriendItem from './dashboard_friend_item';
+// import DashboardFriendItem from './dashboard_friend_item';
 import { fetchFriendships } from '../../actions/friend_actions';
 import { fetchBills, createBill } from '../../actions/bill_actions';
 import { searchUser } from '../../actions/search_actions';
@@ -23,4 +23,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   createBill: (bill) => dispatch(createBill(bill))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DashboardFriendItem);
+export default connect(mapStateToProps, mapDispatchToProps)();

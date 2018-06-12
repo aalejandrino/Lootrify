@@ -14,7 +14,7 @@ const Greeting = (props) => {
     if (isOpen) {
       closeModal()
     } else {
-      openModal('login')
+      openModal('login', '')
     }
   }
 

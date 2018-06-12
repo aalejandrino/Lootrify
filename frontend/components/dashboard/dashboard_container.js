@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  openModal: (modal) => dispatch(openModal(modal)),
+  openModal: (modal, data) => dispatch(openModal(modal, data)),
   closeModal: () => dispatch(closeModal()),
   fetchFriendships: () => dispatch(fetchFriendships()),
   searchUser: (id) => dispatch(searchUser(id)),
