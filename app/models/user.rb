@@ -22,6 +22,20 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
+  has_many :created_bills,
+  primary_key: :id,
+  foreign_key: :creator_id,
+  class_name: :Bill
+
+  has_many :billmemberships,
+  primary_key: :id,
+  foreign_key: :member_id,
+  class_name: :Billmembership
+
+  has_many :bills,
+  through: :billmemberships,
+  source: :bills
+
   has_many :friendships,
   primary_key: :id,
   foreign_key: :user_id,

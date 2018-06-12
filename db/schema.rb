@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180610063220) do
+ActiveRecord::Schema.define(version: 20180611233327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "billmemberships", force: :cascade do |t|
+    t.integer "member_id", null: false
+    t.integer "bill_id", null: false
+  end
+
+  create_table "bills", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "creator_id", null: false
+    t.integer "total_bill", null: false
+    t.string "date", null: false
+    t.integer "split_price"
+    t.integer "num_members"
+    t.index ["creator_id"], name: "index_bills_on_creator_id"
+  end
 
   create_table "friends", force: :cascade do |t|
     t.integer "user_id", null: false
