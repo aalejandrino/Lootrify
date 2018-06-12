@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SearchFormContainer from '../search/search_form_container';
+import CreateBillContainer from '../bill/create_bill_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -15,6 +16,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'addFriend':
       component = <SearchFormContainer />;
+      break;
+    case 'createBill':
+      component = <CreateBillContainer />;
       break;
     default:
       return null;

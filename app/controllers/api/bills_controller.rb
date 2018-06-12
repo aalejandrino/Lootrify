@@ -3,6 +3,9 @@ class Api::BillsController < ApplicationController
   def index
     @created_bills = current_user.created_bills
     @bills = current_user.bills
+
+    @all_bills = Bill.all
+    @bill_memberships = Billmembership.all
   end
 
   def show

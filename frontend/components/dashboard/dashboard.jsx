@@ -8,6 +8,7 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.fetchFriendships();
+    this.props.fetchBills();
   }
 
   constructor(props) {
@@ -110,7 +111,15 @@ class Dashboard extends React.Component {
 
         <div className="centerColumn">
 
-          <DashboardFriendItem user={this.state.selectedFriend} />
+          <DashboardFriendItem
+            user={this.state.selectedFriend}
+            bills={this.props.bills}
+            createBill={this.props.createBill}
+            currentUserId={this.props.currentUserId}
+            closeModal={this.props.closeModal}
+            openModal={this.props.openModal}
+            isOpen={this.props.isOpen}
+            />
 
         </div>
 

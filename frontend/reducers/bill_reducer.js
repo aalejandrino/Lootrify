@@ -1,6 +1,8 @@
 import { RECEIVE_BILLS, RECEIVE_BILL, REMOVE_BILL } from '../actions/bill_actions';
 import merge from 'lodash/merge';
 
+
+
 const billReducer = (state = {}, action) => {
   Object.freeze(state);
 
