@@ -5,9 +5,9 @@ export const RECEIVE_BILL = 'RECEIVE_BILL';
 export const RECEIVE_BILLMEMBERSHIP = 'RECEIVE_BILLMEMBERSHIP'
 export const REMOVE_BILL = 'REMOVE_BILL';
 
-const receiveBills = bills => ({
+const receiveBills = payload => ({
   type: RECEIVE_BILLS,
-  bills
+  payload
 })
 
 const receiveBill = bill => ({
@@ -27,7 +27,7 @@ const rmvBill = id => ({
 
 export const fetchBills = () => dispatch => (
   BillAPIUtil.fetchBills()
-    .then(billsRes => dispatch(receiveBills(billsRes)))
+    .then(payload => dispatch(receiveBills(payload)))
 )
 
 export const fetchBill = (id) => dispatch => (

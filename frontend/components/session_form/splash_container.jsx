@@ -3,8 +3,18 @@ import { login } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Splash from './splash';
 
+const DEMO = {
+  0: 'Jamie Lannister',
+  1: 'Tyrion Lannister',
+  2: 'Jon Snow',
+  3: 'Arya Stark',
+  4: 'Oberyn Martell',
+  5: 'Khal Drogo',
+  6: 'Sansa Stark'
+}
+
 const mapStateToProps = (state, ownProps) => ({
-  user: {user_name: 'demoUser', password: '123456'},
+  user: {user_name: DEMO[Math.floor(Math.random()*7)], password: 'demoUser'},
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

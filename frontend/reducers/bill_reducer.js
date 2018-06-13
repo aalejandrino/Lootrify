@@ -1,18 +1,20 @@
 import { RECEIVE_BILLS, RECEIVE_BILL, RECEIVE_BILLMEMBERSHIP, REMOVE_BILL } from '../actions/bill_actions';
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
-
-
 
 const billReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
+    case LOGOUT_CURRENT_USER:
+      return {};
+
     case RECEIVE_BILLS:
-      return action.bills;
+      return action.payload.bills;
 
     case RECEIVE_BILL:
       return merge({}, state, {bills:{[action.bill.id]:action.bill}})
-    // 
+    //
     // case RECEIVE_BILLMEMBERSHIP:
     //   return merge({}, state, {billmemberships:{[action.billmem.id]:action.billmem}})
 

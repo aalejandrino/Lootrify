@@ -29,30 +29,33 @@ const DashboardFriendItem = (props) => {
           </div>
 
           <div className="friend-bill-list">
-            <ul>
-              {Object.values(props.bills.billmemberships).map((bm, i) => {
+            <div>
+              {Object.values(props.billmemberships).map((bm, i) => {
 
-                if (bm.member_id === props.user.id && (((props.bills.bills)[bm.bill_id]).creator_id === props.currentUserId)) {
+                if (bm.member_id === props.user.id && (((props.bills)[bm.bill_id]).creator_id === props.currentUserId)) {
                   return (
                     <li key={i} className="friend-bill-item">
                       <div id="bill-title-date">
-                        <div>{((props.bills.bills)[bm.bill_id]).date}</div>
-
-                        <div>{((props.bills.bills)[bm.bill_id]).title}</div>
+                        <div id="date">{((props.bills)[bm.bill_id]).date}</div>
+                        <div id="list-icon"></div>
+                        <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
                       </div>
 
                       <div id="bill-amount">
                         <label>you paid</label>
-                        <div>{((props.bills.bills)[bm.bill_id]).total_bill}</div>
+                        <div id="total"><a>$</a>{((props.bills)[bm.bill_id]).total_bill}</div>
+                      </div>
 
+                      <div id="bill-amount-2">
                         <label>you lent {props.user.user_name}</label>
-                        <div>{((props.bills.bills)[bm.bill_id]).total_bill/2}</div>
+                        <div id="total-2"><a>$</a>{((props.bills)[bm.bill_id]).total_bill/2}</div>
                       </div>
 
                     </li>
                   )
                 }})}
-            </ul>
+            </div>
+
 
           </div>
         </div>

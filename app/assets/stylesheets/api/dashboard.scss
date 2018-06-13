@@ -203,3 +203,100 @@
   background: #eee;
   color: #999;
 }
+
+.friend-bill-item {
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid #eee;
+  // background-color: red;
+}
+
+.friend-bill-list li {
+  list-style-type: none;
+
+}
+
+.friend-bill-item {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.friend-bill-item #bill-title-date {
+  width: 325px;
+  display: inline-flex;
+}
+
+.friend-bill-item #date {
+  font-size: 11px;
+  padding: 5px 0px 5px 5px;
+  width: 35px;
+  height: 35px;
+  word-wrap: normal;
+}
+
+.friend-bill-item #bill-amount {
+  width: 75px;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.friend-bill-item #bill-amount-2 {
+  width: 140px;
+}
+
+.friend-bill-item label {
+  font-size: 12px;
+  color: #aaa;
+  // padding: 11px 10px 12px 5px;
+}
+
+.friend-bill-item > div {
+  position: relative;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  padding: 9px 5px;
+
+}
+
+.bill-title-date {
+  display: inline-flex;
+}
+
+#list-icon {
+  background-image: image-url('receipt_icon.png');
+  background-size: 21px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21px;
+  height: 35px;
+  padding-right: 13px;
+  // border: 1px solid lightgrey;
+}
+
+#title {
+  width: 250px;
+  padding: 10px 0px 10px 0px;
+  color: black;
+}
+
+.bill-amount {
+  display: inline-flex;
+}
+
+// #bill-amount div {
+//   padding-left: 5px;
+// }
+//
+// #bill-amount-2 div {
+//   padding-left: 5px;
+// }
+
+#total {
+  color: black;
+}
+
+#total-2 {
+  color: #5bc5a7;
+}
