@@ -22,11 +22,16 @@ class Bill < ApplicationRecord
 
   has_many :billmemberships,
   primary_key: :id,
-  foreign_key: :bill,
+  foreign_key: :bill_id,
   class_name: :Billmembership
 
   has_many :members,
   through: :billmemberships,
   source: :member
+
+  has_many :comments,
+  primary_key: :id,
+  foreign_key: :bill_id,
+  class_name: :Comment
 
 end
