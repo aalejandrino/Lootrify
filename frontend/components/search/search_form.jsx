@@ -28,7 +28,8 @@ class SearchForm extends React.Component {
     if (this.createFriendship(friendship)) {
       this.createFriendship(friendship2);
       this.closeModal();
-      window.location.reload();
+      // window.location.reload();
+      this.props.fetchFriendships();
     }
   }
 

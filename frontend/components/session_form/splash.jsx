@@ -46,8 +46,7 @@ class Splash extends React.Component {
         </div>
 
         <div>
-          {/*<Link to="/demo" className="demoBtn">Demo Login !</Link>*/}
-          <form onSubmit={ () => this.props.processForm(this.handleSubmit)}>
+          <form onSubmit={ () => this.handleSubmit() }>
             <input className='demoBtn btn-orange' type='submit' value='Demo Login !'/>
           </form>
         </div>

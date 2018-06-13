@@ -47,7 +47,7 @@ const DashboardFriendItem = (props) => {
                       </div>
 
                       <div id="bill-amount-2">
-                        <label>you lent {props.user.user_name}</label>
+                        <label>you lent {props.user.user_name.slice(0,20)}</label>
                         <div id="total-2"><a>$</a>{((props.bills)[bm.bill_id]).total_bill/2}</div>
                       </div>
 
