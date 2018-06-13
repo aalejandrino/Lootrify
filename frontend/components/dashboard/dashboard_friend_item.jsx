@@ -14,6 +14,7 @@ const DashboardFriendItem = (props) => {
 
     const openBillComments = (bill) => {
       props.fetchBill(bill.id);
+
       props.openModal('comments', bill);
     };
 

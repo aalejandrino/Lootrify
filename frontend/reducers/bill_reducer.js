@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 const billReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  
   switch (action.type) {
     case LOGOUT_CURRENT_USER:
       return {};
@@ -13,14 +13,11 @@ const billReducer = (state = {}, action) => {
       return action.payload.bills;
 
     case RECEIVE_BILL:
-      return merge({}, state, {bills:{[action.bill.id]:action.bill}})
-    //
-    // case RECEIVE_BILLMEMBERSHIP:
-    //   return merge({}, state, {billmemberships:{[action.billmem.id]:action.billmem}})
+      return merge({}, state, {[action.payload.bill.id]:action.payload.bill});
 
     case REMOVE_BILL:
-      let newState = merge({}, state)
-      delete newState[action.id]
+      let newState = merge({}, state);
+      delete newState[action.id];
       return newState;
 
     default:
