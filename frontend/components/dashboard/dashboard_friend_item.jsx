@@ -40,11 +40,11 @@ const DashboardFriendItem = (props) => {
 
                 if (bm.member_id === props.user.id && (((props.bills)[bm.bill_id]).creator_id === props.currentUserId)) {
                   return (
-                    <li key={i} className="friend-bill-item">
+                    <li key={i} className="friend-bill-item" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
                       <div id="bill-title-date">
                         <div id="date">{((props.bills)[bm.bill_id]).date}</div>
                         <div id="list-icon"></div>
-                        <div id="title btn" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
+                        <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
                       </div>
 
                       <div id="bill-amount">

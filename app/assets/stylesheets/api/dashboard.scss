@@ -221,6 +221,10 @@
   justify-content: space-between;
 }
 
+.friend-bill-item:hover {
+  cursor: pointer;
+}
+
 .friend-bill-item #bill-title-date {
   width: 325px;
   display: inline-flex;

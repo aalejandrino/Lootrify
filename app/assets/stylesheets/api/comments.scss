@@ -1,3 +1,124 @@
 // Place all the styles related to the Api/comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments-form {
+  width: 350px;
+  height: auto;
+  // min-height: 350px;
+  background-color: white;
+  background-clip: padding-box;
+  text-align: center;
+  z-index: 1050;
+  margin: auto;
+  color: #333;
+  text-shadow: none;
+  border: 1px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+
+// keeps modal centered
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 40%;
+    left: 50.25%;
+  transform: translate(-50%, -50%);
+// ---------------------
+}
+
+#comments-title {
+  width: 320px;
+  height: 30px;
+  padding: 8px 15px;
+  display: inline-flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#comments-title * {
+  font-size: 24px;
+  color: white;
+}
+
+#comments-title header {
+}
+
+#comments-title div {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+#comments-title i {
+  display: inline-flex;
+  width: 300px;
+}
+
+.comments-list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments-list li {
+  position: relative;
+  bottom: 1px;
+  list-style-type: none;
+  justify-content: center;
+  width: 150px;
+  height: auto;
+  background-color: white;
+  background-clip: padding-box;
+  text-align: center;
+  z-index: 1200;
+  margin: 6px 90px;
+
+  color: #333;
+  text-shadow: none;
+  border: 1px solid #999;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.comments-form textarea {
+  margin: 5px 0px 0px 0px;
+}
+
+.comments-form button {
+  background-color: #ff652f;
+  width: 50px;
+  height: 30px;
+  color: white;
+  margin-right: 12px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 6px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+
+.comments-form button:hover {
+  cursor: pointer;
+}
+
+.comment #name {
+  font-weight: bold;
+}
+
+#text-and-submit {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+
+#text-and-submit button {
+  position: relative;
+  vertical-align: middle;
+  margin-left: 10px;
+  bottom: 15px;
+}
