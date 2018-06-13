@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import DashboardFriendItem from './dashboard_friend_item.jsx'
+import DashboardFriendItem from './dashboard_friend_item.jsx';
 
 class Dashboard extends React.Component {
 
@@ -15,29 +15,28 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
     this.state = {selectedFriend: ''};
     let openModal = props.openModal;
     let closeModal = props.closeModal;
     let isOpen = props.isOpen;
-  };
+  }
 
   handleClick() {
     if (this.props.isOpen) {
-      this.props.closeModal()
+      this.props.closeModal();
     } else {
-      this.props.openModal('addFriend', '')
+      this.props.openModal('addFriend', '');
     }
-  };
+  }
 
   selectFriend(user) {
     return (e) => {
       this.setState({selectedFriend: user});
       this.props.closeModal();
-    }
+    };
   }
-
 
 
   render() {
@@ -102,7 +101,7 @@ class Dashboard extends React.Component {
                                    {user.user_name}
                                  </div>
                                </li>
-                           )
+                           );
                         }})
                     }
                   </ul>
@@ -116,6 +115,7 @@ class Dashboard extends React.Component {
             user={this.state.selectedFriend}
             bills={this.props.bills}
             billmemberships={this.props.billmemberships}
+            fetchBill={this.props.fetchBill}
             createBill={this.props.createBill}
             currentUserId={this.props.currentUserId}
             closeModal={this.props.closeModal}

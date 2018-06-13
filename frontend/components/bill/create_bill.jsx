@@ -14,7 +14,7 @@ class CreateBill extends React.Component {
       creator_id: props.currentUserId,
       total_bill: '',
       date: `${this.date.getFullYear()}-${this.month}-${this.day}`
-    }
+    };
 
   }
 
@@ -23,19 +23,19 @@ class CreateBill extends React.Component {
   }
 
   handleTitle(e) {
-    this.setState({title: e.currentTarget.value})
+    this.setState({title: e.currentTarget.value});
   }
 
   handleValue(e) {
-    this.setState({total_bill: e.currentTarget.value})
+    this.setState({total_bill: e.currentTarget.value});
   }
 
   handle(content) {
-    return (e) => (this.setState({[content]: e.currentTarget.value}))
+    return (e) => (this.setState({[content]: e.currentTarget.value}));
   }
 
   handleSubmit() {
-    this.props.createBill(this.state, this.props.targetUser.id)
+    this.props.createBill(this.state, this.props.targetUser.id);
 
 
     this.close();
@@ -44,9 +44,9 @@ class CreateBill extends React.Component {
       creator_id: this.props.currentUserId,
       total_bill: '',
       date: `${this.date.getFullYear()}-${this.month}-${this.day}`
-    })
+    });
 
-    setTimeout(this.props.fetchBills, 500)
+    setTimeout(this.props.fetchBills, 500);
 
   }
 
@@ -103,10 +103,10 @@ class CreateBill extends React.Component {
           </div>
         </footer>
       </div>
-    )
+    );
   }
 
 
 }
 
-export default withRouter(CreateBill)
+export default withRouter(CreateBill);

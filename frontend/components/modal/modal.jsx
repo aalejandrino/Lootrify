@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SearchFormContainer from '../search/search_form_container';
 import CreateBillContainer from '../bill/create_bill_container';
+import CommentsContainer from '../comment/comment_form_container';
 
 function Modal({modal, data, closeModal}) {
   if (!modal) {
@@ -19,6 +20,9 @@ function Modal({modal, data, closeModal}) {
       break;
     case 'createBill':
       component = <CreateBillContainer data={data} />;
+      break;
+    case 'comments':
+      component = <CommentsContainer data={data} />;
       break;
     default:
       return null;

@@ -6,11 +6,16 @@ const DashboardFriendItem = (props) => {
     const createBillBtn = () => {
 
       if (props.isOpen) {
-        props.closeModal()
+        props.closeModal();
       } else {
-        props.openModal('createBill', props.user)
+        props.openModal('createBill', props.user);
       }
-    }
+    };
+
+    const openBillComments = (bill) => {
+      props.fetchBill(bill.id);
+      props.openModal('comments', bill);
+    };
 
     if (props.user !== '') {
       return (
@@ -38,7 +43,7 @@ const DashboardFriendItem = (props) => {
                       <div id="bill-title-date">
                         <div id="date">{((props.bills)[bm.bill_id]).date}</div>
                         <div id="list-icon"></div>
-                        <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
+                        <div id="title btn" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
                       </div>
 
                       <div id="bill-amount">
@@ -52,16 +57,16 @@ const DashboardFriendItem = (props) => {
                       </div>
 
                     </li>
-                  )
+                  );
                 }})}
             </div>
 
 
           </div>
         </div>
-      )
+      );
     } else {
-      return (<div></div>)
+      return (<div></div>);
     }
 
 // this needs its own container to pass the state of posts

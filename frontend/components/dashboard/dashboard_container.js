@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Dashboard from './dashboard';
 import { fetchFriendships, fetch } from '../../actions/friend_actions';
-import { fetchBills, createBill } from '../../actions/bill_actions';
+import { fetchBills, fetchBill, createBill } from '../../actions/bill_actions';
 import { searchUser } from '../../actions/search_actions';
 
 
@@ -21,6 +21,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchFriendships: () => dispatch(fetchFriendships()),
   searchUser: (id) => dispatch(searchUser(id)),
   fetchBills: () => dispatch(fetchBills()),
+  fetchBill: (id) => dispatch(fetchBill(id)),
   createBill: (bill) => dispatch(createBill(bill))
 });
 

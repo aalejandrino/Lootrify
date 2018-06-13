@@ -9,8 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     targetUser: state.ui.data, //passed data from modal actions
     currentUserId: state.session.id
-  })
-}
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   openModal: (modal, data) => dispatch(openModal(modal, data)),
