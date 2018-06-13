@@ -12,11 +12,19 @@ export const fetchBill = (id) => (
   })
 )
 
-export const createBill = (bill) => (
+export const createBill = (bill, otherId) => (
   $.ajax({
     method: 'POST',
     url: '/api/bills',
-    data: { bill }
+    data: { bill, otherId: otherId }
+  })
+)
+
+export const createBillmembership = (billmem) => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/billmemberships',
+    data: { billmem }
   })
 )
 

@@ -5,15 +5,15 @@ class CreateBill extends React.Component {
   constructor(props) {
     super(props);
 
-    let date = new Date();
-    let month = (date.getMonth() + 1) >= 10 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1);
-    let day = date.getDate() >= 10 ? date.getDate() : '0' + date.getDate();
+    this.date = new Date();
+    this.month = (this.date.getMonth() + 1) >= 10 ? (this.date.getMonth() + 1) : '0' + (this.date.getMonth() + 1);
+    this.day = this.date.getDate() >= 10 ? this.date.getDate() : '0' + this.date.getDate();
 
     this.state = {
       title: '',
       creator_id: props.currentUserId,
-      total_bill: undefined,
-      date: `${date.getFullYear()}-${month}-${day}`
+      total_bill: '',
+      date: `${this.date.getFullYear()}-${this.month}-${this.day}`
     }
 
   }
@@ -24,7 +24,6 @@ class CreateBill extends React.Component {
 
   handleTitle(e) {
     this.setState({title: e.currentTarget.value})
-    debugger
   }
 
   handleValue(e) {
@@ -33,6 +32,22 @@ class CreateBill extends React.Component {
 
   handle(content) {
     return (e) => (this.setState({[content]: e.currentTarget.value}))
+  }
+
+  handleSubmit() {
+    this.props.createBill(this.state, this.props.targetUser.id)
+
+
+    this.close();
+    this.setState({
+      title: '',
+      creator_id: this.props.currentUserId,
+      total_bill: '',
+      date: `${this.date.getFullYear()}-${this.month}-${this.day}`
+    })
+
+    setTimeout(this.props.fetchBills, 500)
+
   }
 
   render() {
@@ -48,7 +63,7 @@ class CreateBill extends React.Component {
           <span className="bill-with">With <strong>you</strong> and:</span>
           <div className="bill-user">
             <div id="bill-user-pic"></div>
-            <div id="bill-username">{this.props.user.user_name}</div>
+            <div id="bill-username">{this.props.targetUser.user_name}</div>
           </div>
         </div>
 
@@ -84,7 +99,7 @@ class CreateBill extends React.Component {
         <footer className="bill-footer">
           <div className="footer-btns btn">
             <button onClick={this.close.bind(this)}>Cancel</button>
-            <button>Save</button>
+            <button onClick={this.handleSubmit.bind(this)}>Save</button>
           </div>
         </footer>
       </div>

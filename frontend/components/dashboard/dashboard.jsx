@@ -31,16 +31,15 @@ class Dashboard extends React.Component {
   };
 
   selectFriend(user) {
-
     return (e) => {
       this.setState({selectedFriend: user});
       this.props.closeModal();
-
     }
   }
 
-  render() {
+  
 
+  render() {
 
     return(
     <div className='center_container'>

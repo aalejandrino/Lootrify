@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resources :friends, only: [:show, :index, :create, :destroy]
     resources :bills, only: [:show, :index, :create, :destroy]
+    resources :billmemberships, only: [:create]
 
     get '/search/users', to: 'search#users'
 
