@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :bills, only: [:show, :index, :create, :destroy] do
       resources :comments, only: [:show, :create, :destroy, :index]
     end
-    resources :billmemberships, only: [:create]
+    resources :billmemberships, only: [:create, :destroy]
 
     get '/search/users', to: 'search#users'
 

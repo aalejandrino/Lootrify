@@ -21,6 +21,10 @@ const Greeting = (props) => {
   }
 
   const handleLogout = () => {
+    if (isOpen) {
+      closeModal();
+    }
+
     logout(),
     <Redirect to="/" />
 

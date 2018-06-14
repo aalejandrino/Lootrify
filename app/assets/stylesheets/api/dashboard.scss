@@ -280,8 +280,8 @@
 }
 
 #title {
-  width: 250px;
-  padding: 10px 0px 10px 0px;
+  width: 200px;
+  padding: 5px 0px;
   color: black;
 }
 
@@ -289,18 +289,19 @@
   display: inline-flex;
 }
 
-// #bill-amount div {
-//   padding-left: 5px;
-// }
-//
-// #bill-amount-2 div {
-//   padding-left: 5px;
-// }
-
 #total {
   color: black;
 }
 
 #total-2 {
   color: #5bc5a7;
+}
+
+.friend-bill-item #delete-bill {
+  padding: 20px 15px;
+}
+
+.friend-bill-item #delete-bill:hover {
+  cursor: pointer;
+  color: red;
 }

@@ -20,9 +20,11 @@ const receiveBillmembership = billmem => ({
   billmem
 });
 
-const rmvBill = id => ({
+const rmvBill = (id, billmemId, billmemId2) => ({
   type: REMOVE_BILL,
-  id
+  id,
+  billmemId,
+  billmemId2
 });
 
 export const fetchBills = () => dispatch => (
@@ -45,7 +47,7 @@ export const createBillmembership = billmem => (
     .then(billmemRes => dispatch (receiveBillmembership(billmemRes)))
 );
 
-export const removeBill = (id) => dispatch => (
+export const removeBill = (id, billmemId, billmemId2) => dispatch => (
   BillAPIUtil.removeBill(id)
-    .then(res => dispatch(rmvBill(res.id)))
+    .then(res => dispatch(rmvBill(id, billmemId, billmemId2)))
 );

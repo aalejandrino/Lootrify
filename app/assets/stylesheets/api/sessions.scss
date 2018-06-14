@@ -92,6 +92,10 @@ input:-moz-placeholder { color:lightgrey; }
   background-color: transparent;
 }
 
+#signup-image:hover {
+  cursor: pointer;
+}
+
 #signup-inputs {
   display: inline-block;
   vertical-align: top;

@@ -19,7 +19,7 @@ class Api::BillsController < ApplicationController
       Billmembership.create(member_id: (current_user.id), bill_id: @bill.id)
       Billmembership.create(member_id: (params[:otherId].to_i), bill_id: @bill.id)
       @comments = @bill.comments
-      
+
       render :show
     else
       render json: @bill.errors.full_messages, status: 422
@@ -28,7 +28,14 @@ class Api::BillsController < ApplicationController
   end
 
   def destroy
+    @bill = Bill.find(params[:id])
+    
+    @bill_memberships = Billmembership.all.select {|billmem| billmem.bill_id == @bill.id}
+    @bill_memberships.each do |billmem|
+      billmem.destroy
+    end
 
+    @bill.destroy
   end
 
   private

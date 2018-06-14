@@ -18,6 +18,21 @@ const DashboardFriendItem = (props) => {
       props.openModal('comments', bill);
     };
 
+    const deleteBill = (billId) => {
+      let billmems = [];
+
+      Object.values(props.billmemberships).forEach((bm) => {
+        if (bm.bill_id === billId) {
+          billmems.push(bm);
+        }
+      })
+
+      let billmemId = billmems[0].id
+      let billmemId2 = billmems[1].id
+
+      props.removeBill(billId, billmemId, billmemId2);
+    };
+
     if (props.user !== '') {
       return (
         <div>
@@ -38,13 +53,13 @@ const DashboardFriendItem = (props) => {
             <div>
               {Object.values(props.billmemberships).map((bm, i) => {
 
-                if (bm.member_id === props.user.id && (((props.bills)[bm.bill_id]).creator_id === props.currentUserId)) {
+                if (bm.member_id === props.user.id && (((props.bills)[bm.bill_id]).creator_id === props.currentUserId) || false) {
                   return (
-                    <li key={i} className="friend-bill-item" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
-                      <div id="bill-title-date">
+                    <li key={i} className="friend-bill-item">
+                      <div id="bill-title-date" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
                         <div id="date">{((props.bills)[bm.bill_id]).date}</div>
                         <div id="list-icon"></div>
-                        <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,30)}</div>
+                        <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,25)}</div>
                       </div>
 
                       <div id="bill-amount">
@@ -57,6 +72,7 @@ const DashboardFriendItem = (props) => {
                         <div id="total-2"><a>$</a>{((props.bills)[bm.bill_id]).total_bill/2}</div>
                       </div>
 
+                      <a id="delete-bill" onClick= { () => deleteBill(bm.bill_id) } >X</a>
                     </li>
                   );
                 }})}

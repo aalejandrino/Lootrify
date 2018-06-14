@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
@@ -60,6 +60,11 @@ class SessionForm extends React.Component {
 
   };
 
+  redirect() {
+    // <Redirect to="/" />
+    this.props.history.push('/');
+  }
+
   render() {
     return (
       <div className="sessionForm">
@@ -68,7 +73,7 @@ class SessionForm extends React.Component {
 
         <form className="form-box" onSubmit={this.handleSubmit}>
 
-          <div id='signup-image'></div>
+          <div onClick={ () => this.redirect() } id='signup-image'></div>
 
           <div id='signup-inputs'>
             <h3>

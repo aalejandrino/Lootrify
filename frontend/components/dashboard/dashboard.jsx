@@ -143,6 +143,7 @@ class Dashboard extends React.Component {
             billmemberships={this.props.billmemberships}
             fetchBill={this.props.fetchBill}
             createBill={this.props.createBill}
+            removeBill={this.props.removeBill}
             currentUserId={this.props.currentUserId}
             closeModal={this.props.closeModal}
             openModal={this.props.openModal}
