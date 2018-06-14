@@ -6,7 +6,7 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {search: '', friendId: null};
+    this.state = {search: '', friendId: null, showSearch: true};
     this.handleInput = this.handleInput.bind(this);
     this.selectName = this.selectName.bind(this);
 
@@ -41,21 +41,29 @@ class SearchForm extends React.Component {
     this.setState({search: e.currentTarget.value}, () => {
 
     });
+
     this.searchUsers(this.state.search);
+
+    setTimeout(this.setState({search:' '}), 100)
   };
+
+  showSearch(e) {
+    this.setState({showSearch: true})
+  }
 
   selectName(friendId) {
 
     return (e) => {
       let name = e.currentTarget.firstChild.data;
-      this.setState({search: name, friendId});
+
+      this.setState({search: name, friendId, showSearch: false});
 
     };
   }
 
   render() {
     let results = this.props.users.map((user,i) => {
-      if (this.state.search === user.user_name.slice(0, this.state.search.length)) {
+      if (this.state.search === user.user_name.slice(0, this.state.search.length) && this.state.showSearch) {
         return(
           <li
             key={i}
@@ -87,6 +95,7 @@ class SearchForm extends React.Component {
           <input
             type="text"
             placeholder="Find names here and add them as Friends!"
+            onClick = {this.showSearch.bind(this)}
             onChange = {this.handleInput}
             value = {this.state.search}
             />

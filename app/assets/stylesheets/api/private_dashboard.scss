@@ -53,9 +53,18 @@
   text-align: center;
 }
 
+#total-balances #total-balance {
+  width: 90px;
+}
+
 #total-balances #you-owe {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+}
+
+#total-balances #you-are-owed {
+  // padding: 10px 40px;
+  width: 90px;
 }
 
 #category {

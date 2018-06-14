@@ -67,9 +67,9 @@ class DashboardPrivate extends React.Component {
 
           <div id="dashboard-balances">
             <div id="total-balances">
-              <div>total balance: {this.state.total_balance}</div>
+              <div id="total-balance">total balance: {this.state.total_balance}</div>
               <div id="you-owe">you owe: {this.state.you_owe}</div>
-              <div>you are owed: {this.state.you_are_owed}</div>
+              <div id="you-are-owed">you are owed: {this.state.you_are_owed}</div>
             </div>
 
             <h2 id="category">
