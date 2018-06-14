@@ -6,9 +6,9 @@ export const createFriendship = friend => (
   })
 )
 
-export const removeFriendship = id => (
+export const removeFriendship = (id) => (
   $.ajax({
-    method: DELETE,
+    method: 'DELETE',
     url: `api/friends/${id}`
   })
 )

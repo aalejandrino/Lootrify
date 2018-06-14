@@ -1,7 +1,15 @@
 class Api::FriendsController < ApplicationController
 
   def index
-    @friends = current_user.friendships
+    friends1 = current_user.friendships
+    friends2 = []
+
+    friends1.each do |friend|
+      friends2 << Friend.find_by_ids(friend.friend_id, friend.user_id)
+    end
+
+    @friends = friends1 + friends2
+
   end
 
   def create

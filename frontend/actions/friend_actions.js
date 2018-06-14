@@ -14,9 +14,11 @@ const receiveFriend = (friend) => ({
   friend
 })
 
-const removeFriend = (id) => ({
+const removeFriend = (id, currentUserId, friendId) => ({
   type: REMOVE_FRIEND,
-  id
+  id,
+  currentUserId,
+  friendId
 })
 
 export const createFriendship = (friend) => dispatch => (
@@ -24,10 +26,13 @@ export const createFriendship = (friend) => dispatch => (
     .then(friendRes => dispatch(receiveFriend(friendRes)))
 );
 
-export const removeFriendship = (id) => dispatch => (
-  FriendAPIUtil.removeFriendship(id)
-    .then(res => dispatch(removeFriend(res.id)))
-);
+export const removeFriendship = (id, currentUserId, friendId) => dispatch => {
+  // debugger
+  return (
+    FriendAPIUtil.removeFriendship(id)
+      .then(res => dispatch(removeFriend(id, currentUserId, friendId)))
+  );
+}
 
 export const fetchFriendships = () => dispatch => (
   FriendAPIUtil.fetchFriendships()

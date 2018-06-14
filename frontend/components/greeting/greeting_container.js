@@ -11,7 +11,7 @@ import Greeting from './greeting';
 // from benchbnb
 
 const mapStateToProps = (state) => ({
-  currentUser: state.entities.users[state.session.id],
+  currentUser: state.entities.users[state.session.id] || state.session.currentUser,
   isOpen: Boolean(state.ui.modal)
 })
 

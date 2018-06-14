@@ -15,8 +15,12 @@
 
 #current-friends > ul li {
   margin-left: 5px;
-  justify-content: flex-start;
+  justify-content: space-between;
   font-size: 14px;
+}
+
+#current-friends i {
+  padding: 3px 5px 3px 0px;
 }
 
 #current-friends > ul li:hover {
@@ -29,4 +33,13 @@
 
 #current-friends > ul li div {
   margin-left: 5px;
+}
+
+#current-friends a {
+  // background-color: red;
+  padding: 0px 3px;
+}
+
+#current-friends a:hover {
+  color: #ff5216;
 }

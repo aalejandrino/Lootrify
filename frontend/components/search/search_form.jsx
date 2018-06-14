@@ -22,15 +22,19 @@ class SearchForm extends React.Component {
     }
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
+
     let friendship = {user_id: this.props.currentUserId, friend_id: this.state.friendId};
     let friendship2 = {user_id: this.state.friendId, friend_id: this.props.currentUserId};
-    if (this.createFriendship(friendship)) {
-      this.createFriendship(friendship2);
-      this.closeModal();
+
+    this.createFriendship(friendship)
+      .then( () => this.createFriendship(friendship2) )
+      .then( () => this.props.fetchFriendships() )
+      .then( () => this.setState({search: '', friendId: null}) )
+      .then( () => this.closeModal());
+
       // window.location.reload();
-      this.props.fetchFriendships();
-    }
   }
 
   handleInput(e) {

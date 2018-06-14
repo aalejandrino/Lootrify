@@ -20,5 +20,9 @@ class Friend  < ApplicationRecord
   foreign_key: :friend_id,
   class_name: :User
 
+  def self.find_by_ids(userId, friendId)
+    user = Friend.find_by(user_id: userId, friend_id: friendId)
+    user
+  end
+
 end
- 

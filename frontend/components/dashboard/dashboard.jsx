@@ -7,7 +7,7 @@ import DashboardFriendItem from './dashboard_friend_item.jsx';
 class Dashboard extends React.Component {
 
   componentDidMount() {
-    
+
     this.props.fetchFriendships().then(() => this.props.fetchBills()).then(() => {
       this.setState({selectedFriend: ''});
     })
@@ -37,6 +37,27 @@ class Dashboard extends React.Component {
       this.setState({selectedFriend: user});
       this.props.closeModal();
     };
+  }
+
+  removeFriend(friendId, currentUserId) {
+    return (e) => {
+      if (this.props.isOpen) {
+        this.props.closeModal();
+      }
+
+      this.props.friends.forEach(friendship => {
+        if (friendship.user_id === currentUserId && friendship.friend_id === friendId ||
+            friendship.user_id === friendId && friendship.friend_id === currentUserId) {
+
+              console.log(`You removedfriendship# ${friendship.id}!`)
+
+              // debugger
+              this.props.removeFriendship(friendship.id, currentUserId, friendship.friend_id)
+                .then( () => this.props.fetchFriendships())
+            }
+      })
+
+    }
   }
 
 
@@ -93,14 +114,18 @@ class Dashboard extends React.Component {
                        if (user.id !== this.props.currentUserId) {
                            // this.props.searchUser(friend.friend_id); // gives action type errors?
                            return (
-                               <li
-                                 key={user.id}
-                                 onClick={this.selectFriend(user).bind(this)}
-                                 >
+                               <li key={user.id} >
+                                 <div onClick={this.selectFriend(user).bind(this)}>
                                  <i className="fas fa-user"></i>
-                                 <div>
                                    {user.user_name}
                                  </div>
+
+                                 <a
+                                   className="remove-friend"
+                                   onClick={this.removeFriend(user.id, this.props.currentUserId).bind(this)}
+                                   >
+                                   x
+                                 </a>
                                </li>
                            );
                         }})
