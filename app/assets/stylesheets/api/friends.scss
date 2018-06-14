@@ -24,20 +24,22 @@
 }
 
 #current-friends > ul li:hover {
-  cursor: pointer;
   background: #eee;
   color: #999;
 }
 
 
-
 #current-friends > ul li div {
+  cursor: pointer;
   margin-left: 5px;
 }
 
 #current-friends a {
-  // background-color: red;
   padding: 0px 3px;
+}
+
+#current-friends a:hover {
+  cursor: pointer;
 }
 
 #current-friends a:hover {

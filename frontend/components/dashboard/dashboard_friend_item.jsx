@@ -62,12 +62,12 @@ const DashboardFriendItem = (props) => {
                         <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,25)}</div>
                       </div>
 
-                      <div id="bill-amount">
+                      <div id="bill-amount" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
                         <label>you paid</label>
                         <div id="total"><a>$</a>{((props.bills)[bm.bill_id]).total_bill}</div>
                       </div>
 
-                      <div id="bill-amount-2">
+                      <div id="bill-amount-2" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
                         <label>you lent {props.user.user_name.slice(0,20)}</label>
                         <div id="total-2"><a>$</a>{((props.bills)[bm.bill_id]).total_bill/2}</div>
                       </div>
