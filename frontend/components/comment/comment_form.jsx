@@ -24,12 +24,14 @@ class Comments extends React.Component {
     // debugger
     this.props.createComment(this.state.bill_id, this.state)
     setTimeout(this.setState({body: ''}), 500);
-
-
   }
 
   close() {
     this.props.closeModal();
+  }
+
+  removeComment(comment) {
+    return (e) => this.props.removeComment(this.props.targetBill.id, comment.id)
   }
 
   render() {
@@ -47,10 +49,13 @@ class Comments extends React.Component {
             this.props.comments.map((comment, i) => {
               if (comment.bill_id === this.props.targetBill.id) {
                 return(
-                  <li key={i} className="comment">
-                    <div id="name">{this.props.users[comment.author_id].user_name}</div>
-                    <div>{comment.body}</div>
-                  </li>
+
+                    <li key={i} className="comment">
+                      <div id="name">{this.props.users[comment.author_id].user_name}</div>
+                      <div>{comment.body}</div>
+                      <a id="remove-comment" onClick={this.removeComment(comment).bind(this)}>x</a>
+                    </li>
+
                 )
               } else {
                 return null

@@ -1,5 +1,5 @@
 import { RECEIVE_BILL } from '../actions/bill_actions';
-import { RECEIVE_COMMENT } from '../actions/comment_actions';
+import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
@@ -15,6 +15,11 @@ const commentReducer = (state = {}, action) => {
 
     case RECEIVE_COMMENT:
       return merge({}, state, {[action.comment.id]: action.comment} )
+
+    case REMOVE_COMMENT:
+      let newState = merge({}, state)
+      delete newState[action.id];
+      return newState;
 
     default:
       return state;

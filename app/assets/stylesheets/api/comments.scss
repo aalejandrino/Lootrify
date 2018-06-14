@@ -128,3 +128,15 @@
   margin-left: 10px;
   bottom: 15px;
 }
+
+#remove-comment {
+  position: absolute;
+  text-align: right;
+  bottom: 7px;
+  left: 150px;
+}
+
+#remove-comment:hover {
+  color: #ff5216;
+  cursor: pointer;
+}
