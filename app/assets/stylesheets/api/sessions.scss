@@ -105,12 +105,36 @@ input:-moz-placeholder { color:lightgrey; }
   font-size: 22px;
 }
 
-#signup-inputs h2 {
+#signup-inputs h3 {
+  text-align: left;
   text-transform: uppercase;
   font-size: 16px;
   color: #999;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 15px;
+  margin: 0px 0px;
+}
+
+#signup-inputs #signup-errors {
+  padding: 15px 10px 5px 10px;
+  padding-left: 20px;
+  border-color: #b34;
+  background: #c45;
+  color: white;
+  text-shadow: 0 -1px #9a2a38;
+  margin-bottom: 20px;
+  font-size: 18px;
+
+}
+
+#signup-inputs #signup-errors span {
+  font-weight: bold;
+
+}
+
+#signup-inputs #signup-errors ul {
+  margin: 10px 0px
+
 }
 
 #signup-inputs input {
@@ -131,4 +155,12 @@ input:-moz-placeholder { color:lightgrey; }
   border-radius: 5px;
   border-color: #FF883B;
   padding: 11px 15px;
+}
+
+#session-errors {
+  color: red;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 7px 0px;
+  padding: 0px;
 }

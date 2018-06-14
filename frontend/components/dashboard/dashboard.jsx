@@ -7,9 +7,10 @@ import DashboardFriendItem from './dashboard_friend_item.jsx';
 class Dashboard extends React.Component {
 
   componentDidMount() {
-    this.props.fetchFriendships();
-    this.props.fetchBills();
-    this.setState({selectedFriend: ''});
+    
+    this.props.fetchFriendships().then(() => this.props.fetchBills()).then(() => {
+      this.setState({selectedFriend: ''});
+    })
   }
 
   constructor(props) {

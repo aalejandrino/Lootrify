@@ -64,7 +64,8 @@
   bottom: 1px;
   list-style-type: none;
   justify-content: center;
-  width: 150px;
+  min-width: 125px;
+  width: auto;
   height: auto;
   background-color: white;
   background-clip: padding-box;
@@ -77,6 +78,11 @@
   border: 1px solid #999;
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.comments-list li div {
+  word-wrap: break-word;
+
 }
 
 .comments-form textarea {

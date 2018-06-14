@@ -40,15 +40,24 @@ class SessionForm extends React.Component {
   };
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+
+    if (this.props.errors.length !== 0) {
+
+      return(
+        <div id="signup-errors">
+          <span> The following errors occured: </span>
+
+          <ul >
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    };
+
   };
 
   render() {
@@ -56,17 +65,18 @@ class SessionForm extends React.Component {
       <div className="sessionForm">
         <h3>{this.props.formType} - Introduce Yourself</h3>
 
-        {this.renderErrors()}
 
         <form className="form-box" onSubmit={this.handleSubmit}>
 
           <div id='signup-image'></div>
 
           <div id='signup-inputs'>
-            <h2>
+            <h3>
               Introduce Yourself
-            </h2>
+            </h3>
             <br></br>
+
+            {this.renderErrors()}
 
             <div> Hi there! my name is
               <br></br>

@@ -18,11 +18,14 @@ class Splash extends React.Component {
   }
 
   handleSubmit(e) {
-
+    // debugger
+    e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.closeModal();
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => {
+      this.props.closeModal();
 
+      this.props.history.push('/dashboard')
+    });
   }
 
   render() {
@@ -46,7 +49,7 @@ class Splash extends React.Component {
         </div>
 
         <div>
-          <form onSubmit={ () => this.handleSubmit() }>
+          <form onSubmit={ this.handleSubmit }>
             <input className='demoBtn btn-orange' type='submit' value='Demo Login !'/>
           </form>
         </div>

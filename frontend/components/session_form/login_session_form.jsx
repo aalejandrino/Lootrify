@@ -20,8 +20,8 @@ class LoginSessionForm extends React.Component {
   clearState() {
     this.setState (
       {
-        user_name: 'User Name',
-        password: 'Password',
+        user_name: '',
+        password: '',
         email: '',
       }
     );
@@ -36,15 +36,13 @@ class LoginSessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.clearState();
-    this.props.processForm(user);
-
-    this.props.closeModal();
+    this.props.processForm(user).then( () => this.props.closeModal() );
 
   };
 
   renderErrors() {
     return(
-      <ul>
+      <ul id="session-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -90,9 +88,10 @@ class LoginSessionForm extends React.Component {
 
             <input className='modalSubmitBtn btn-teal' type='submit' value={this.props.formType}/>
           </div>
+
+          {this.renderErrors()}
         </form>
 
-        {this.renderErrors()}
 
       </div>
     );

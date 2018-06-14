@@ -11,6 +11,8 @@ const Greeting = (props) => {
   let isOpen = props.isOpen;
 
   const handleClick = () => {
+    props.clearErrors();
+
     if (isOpen) {
       closeModal()
     } else {

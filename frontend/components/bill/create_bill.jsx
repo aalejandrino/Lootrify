@@ -35,18 +35,23 @@ class CreateBill extends React.Component {
   }
 
   handleSubmit() {
-    this.props.createBill(this.state, this.props.targetUser.id);
+  // this.props.processForm(user).then( () => this.props.closeModal() );
+    this.props.createBill(this.state, this.props.targetUser.id).then( () => {
 
 
-    this.close();
-    this.setState({
-      title: '',
-      creator_id: this.props.currentUserId,
-      total_bill: '',
-      date: `${this.date.getFullYear()}-${this.month}-${this.day}`
-    });
+      this.setState({
+        title: '',
+        creator_id: this.props.currentUserId,
+        total_bill: '',
+        date: `${this.date.getFullYear()}-${this.month}-${this.day}`
+      });
 
-    setTimeout(this.props.fetchBills, 500);
+      this.props.closeModal();
+
+      setTimeout(this.props.fetchBills, 500);
+    },
+    () => alert("Please enter a description and $ amount !")
+   );
 
   }
 

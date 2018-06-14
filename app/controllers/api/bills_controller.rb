@@ -18,7 +18,8 @@ class Api::BillsController < ApplicationController
     if @bill.save
       Billmembership.create(member_id: (current_user.id), bill_id: @bill.id)
       Billmembership.create(member_id: (params[:otherId].to_i), bill_id: @bill.id)
-
+      @comments = @bill.comments
+      
       render :show
     else
       render json: @bill.errors.full_messages, status: 422
