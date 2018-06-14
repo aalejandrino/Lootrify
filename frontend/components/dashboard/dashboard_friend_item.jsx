@@ -33,7 +33,7 @@ const DashboardFriendItem = (props) => {
       props.removeBill(billId, billmemId, billmemId2);
     };
 
-    if (props.user !== '') {
+    if (props.user !== '' && props.user !== '#private_dashboard#') {
       return (
         <div>
           <div id="user-show">

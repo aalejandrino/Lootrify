@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import DashboardFriendItem from './dashboard_friend_item.jsx';
+import DashboardPrivate from './dashboard_private_container';
 
 class Dashboard extends React.Component {
 
@@ -35,8 +36,17 @@ class Dashboard extends React.Component {
   selectFriend(user) {
     return (e) => {
       this.setState({selectedFriend: user});
+      // debugger
       this.props.closeModal();
     };
+  }
+
+  selectDashboard() {
+    return (e) => {
+      this.setState({selectedFriend: '#private_dashboard#'});
+      // debugger
+      this.props.closeModal();
+    }
   }
 
   removeFriend(friendId, currentUserId) {
@@ -49,9 +59,6 @@ class Dashboard extends React.Component {
         if (friendship.user_id === currentUserId && friendship.friend_id === friendId ||
             friendship.user_id === friendId && friendship.friend_id === currentUserId) {
 
-              console.log(`You removedfriendship# ${friendship.id}!`)
-
-              // debugger
               this.props.removeFriendship(friendship.id, currentUserId, friendship.friend_id)
                 .then( () => this.props.fetchFriendships())
             }
@@ -70,7 +77,7 @@ class Dashboard extends React.Component {
         <div className="leftSideBar">
           <ul>
             <div id="leftSide-1">
-              <li>
+              <li id = "dashboard" onClick={this.selectDashboard().bind(this)}>
                 <span></span>
                 Dashboard
               </li>
@@ -150,6 +157,7 @@ class Dashboard extends React.Component {
             isOpen={this.props.isOpen}
             />
 
+          <DashboardPrivate selected={this.state.selectedFriend}/>
 
         </div>
 
