@@ -26,7 +26,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "webpack",
+    "postinstall": "webpack --optimize-minimize",
     "start": "webpack --mode=development --watch"
   },
   "repository": {
