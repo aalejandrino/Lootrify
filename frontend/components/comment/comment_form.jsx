@@ -8,7 +8,6 @@ class Comments extends React.Component {
 
     this.state = props.form;
 
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handle(content) {
@@ -16,7 +15,7 @@ class Comments extends React.Component {
   }
 
   handleSubmit() {
-    // debugger
+
     this.props.createComment(this.state.bill_id, this.state)
     setTimeout(this.setState({body: ''}), 500);
   }
@@ -41,7 +40,7 @@ class Comments extends React.Component {
   }
 
   render() {
-    // debugger
+  
     return(
       <div className="comments-form">
 

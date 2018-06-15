@@ -31,7 +31,7 @@ class EditBill extends React.Component {
   }
 
   handleSubmit() {
-  // this.props.processForm(user).then( () => this.props.closeModal() );
+
     this.props.updateBill(this.state, this.props.targetBill.id).then( () => {
 
       this.props.closeModal();

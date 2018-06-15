@@ -35,7 +35,7 @@ class CreateBill extends React.Component {
   }
 
   handleSubmit() {
-  // this.props.processForm(user).then( () => this.props.closeModal() );
+
     this.props.createBill(this.state, this.props.targetUser.id).then( () => {
 
 
@@ -49,7 +49,7 @@ class CreateBill extends React.Component {
       this.props.closeModal();
 
       setTimeout(this.props.fetchBills, 500);
-  
+
     },
     () => alert("Please enter a description and $ amount !")
    );

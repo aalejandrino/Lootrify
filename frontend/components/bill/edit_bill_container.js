@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     targetBill: state.ui.data.bill, //passed data from modal actions
     targetUser: state.ui.data.user
-    // currentUserId: state.session.id
+
   });
 };
 

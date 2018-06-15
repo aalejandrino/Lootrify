@@ -4,6 +4,7 @@ export const RECEIVE_BILLS = 'RECEIVE_BILLS';
 export const RECEIVE_BILL = 'RECEIVE_BILL';
 export const RECEIVE_BILLMEMBERSHIP = 'RECEIVE_BILLMEMBERSHIP';
 export const REMOVE_BILL = 'REMOVE_BILL';
+export const RECEIVE_BILL_ERRORS = 'RECEIVE_BILL_ERRORS';
 
 const receiveBills = payload => ({
   type: RECEIVE_BILLS,
@@ -27,6 +28,11 @@ const rmvBill = (id, billmemId, billmemId2) => ({
   billmemId2
 });
 
+const receiveErrors = (errors) => ({
+  type: RECEIVE_BILL_ERRORS,
+  errors
+});
+
 export const fetchBills = () => dispatch => (
   BillAPIUtil.fetchBills()
     .then(payload => dispatch(receiveBills(payload)))
@@ -39,7 +45,8 @@ export const fetchBill = (id) => dispatch => (
 
 export const createBill = (bill, otherId) => dispatch => (
   BillAPIUtil.createBill(bill, otherId)
-    .then(billRes => dispatch(receiveBill(billRes)))
+    .then(billRes => dispatch(receiveBill(billRes)),
+            (errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const createBillmembership = billmem => dispatch => (
@@ -54,5 +61,6 @@ export const removeBill = (id, billmemId, billmemId2) => dispatch => (
 
 export const updateBill = (bill, id) => dispatch => (
   BillAPIUtil.updateBill(bill, id)
-    .then(payload => dispatch(receiveBill(payload)))
+    .then(payload => dispatch(receiveBill(payload)),
+            (errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
