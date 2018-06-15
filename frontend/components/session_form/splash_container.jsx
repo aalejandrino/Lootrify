@@ -21,7 +21,7 @@ const DEMO = {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  user: {user_name: DEMO[Math.floor(Math.random()*7)], password: 'demoUser'},
+  user: {user_name: DEMO[Math.floor(Math.random()*14)], password: 'demoUser'},
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
