@@ -49,6 +49,7 @@ class CreateBill extends React.Component {
       this.props.closeModal();
 
       setTimeout(this.props.fetchBills, 500);
+  
     },
     () => alert("Please enter a description and $ amount !")
    );

@@ -54,7 +54,7 @@
 }
 
 #total-balances #total-balance {
-  width: 90px;
+  width: 120px;
 }
 
 #total-balances #you-owe {
@@ -62,9 +62,17 @@
   border-right: 1px solid #ddd;
 }
 
+#negative {
+  color: #ff652f;
+}
+
+#positive {
+  color: #5bc5a7;
+}
+
 #total-balances #you-are-owed {
   // padding: 10px 40px;
-  width: 90px;
+  width: 120px;
 }
 
 #category {
@@ -150,6 +158,14 @@
 .dashboard-users {
   text-align: left;
   margin-left: 5px;
+}
+
+.dashboard-users:hover {
+  cursor: pointer;
+}
+
+#highlight:hover {
+  background-color: #eee;
 }
 
 .dashboard-users #username {

@@ -23,7 +23,13 @@ class Dashboard extends React.Component {
     let openModal = props.openModal;
     let closeModal = props.closeModal;
     let isOpen = props.isOpen;
+
+    this.updateFriend = this.updateFriend;
   }
+
+  updateFriend (user) {
+    this.setState({selectedFriend: user});
+  };
 
   handleClick() {
     if (this.props.isOpen) {
@@ -44,6 +50,8 @@ class Dashboard extends React.Component {
   selectDashboard() {
     return (e) => {
       this.setState({selectedFriend: '#private_dashboard#'});
+
+      // window.location.reload()
       // debugger
       this.props.closeModal();
     }
@@ -157,7 +165,7 @@ class Dashboard extends React.Component {
             isOpen={this.props.isOpen}
             />
 
-          <DashboardPrivate selected={this.state.selectedFriend}/>
+          <DashboardPrivate selected={this.state.selectedFriend} update={this.updateFriend.bind(this)}/>
 
         </div>
 
