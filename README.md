@@ -1,17 +1,18 @@
 # Lootrify
-Full Stack Project
-April 16, 2016 - App Academy Cohort
 
-You can access this app here: <br>
+Lootrify is a web application that allows users to create a bill, keep a detailed record of the transaction, and split it among coworkers, friends, and family. It also has a private dashboard which lists all pending transactions involving you and others.
+
+## Live Demo
+You can access the working live demo here: <br>
 [Live Page](https://lootrify.herokuapp.com/)
 
-  Lootrify is a web application that allows users to create a bill, keep a detailed record of the transaction, and split it among coworkers, friends, and family. It also has a private dashboard which lists all pending transactions involving you and others.
 
 ## Table of Contents
   * Features
-  * ...
+  * Technologies
   * Pass Data Through Modals
   * Multiple Demo Users
+  * Credits
   * Future Functionalities
 
 
@@ -34,6 +35,11 @@ You can access this app here: <br>
 
   ![](https://s6.postimg.cc/4msqc11m9/dashboard.png)
 
+
+## Technologies
+  * [jQuery - Ajax](https://www.w3schools.com/jquery/jquery_ref_ajax.asp) - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+  * [Ruby on Rails](https://rubyonrails.org/) - Ruby programming's Web Application Framework used for Backend Development
+  * [Postgresql](https://www.postgresql.org/) - Advanced open source relational database
 
 ## Pass Data through Modals
   * This application relies on modals, which somewhat made things complicated because I would lose access to some data.  One way to get around this was to pass those necessary data through the modal actions!
@@ -119,6 +125,10 @@ const mapStateToProps = (state, ownProps) => ({
   user: {user_name: DEMO[Math.floor(Math.random()*14)], password: 'demoUser'},
 });
 ```
+
+## Credits
+  * [Font Awesome](https://fontawesome.com/) - Open website for designers, developers, users so they can add icons for their projects.
+  * [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) for Google Chrome - Helps with backend development
 
 ## Future Functionalities
   * Settling debts between users (fake "checkout")
