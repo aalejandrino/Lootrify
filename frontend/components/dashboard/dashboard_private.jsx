@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 
 class DashboardPrivate extends React.Component {
 
+  componentWillUnmount() {
+    clearInterval(this.update1);
+    clearInterval(this.update2);
+    clearInterval(this.update3);
+  }
+
   constructor(props) {
     super(props);
 
@@ -218,9 +224,9 @@ class DashboardPrivate extends React.Component {
   }
 
   setBalances() {
-    setInterval(this.updateTotalOwed.bind(this), 1000);
-    setInterval(this.updateYouAreOwed.bind(this), 1000);
-    setInterval(this.updateTotalBalance.bind(this), 1200);
+    this.update1 = setInterval(this.updateTotalOwed.bind(this), 2000);
+    this.update2 = setInterval(this.updateYouAreOwed.bind(this), 2000);
+    this.update3 = setInterval(this.updateTotalBalance.bind(this), 2100);
 
   }
 
