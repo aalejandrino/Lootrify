@@ -55,9 +55,9 @@ class DashboardPrivate extends React.Component {
 
   render() {
     if (this.state.total_balance >= 0) {
-      var total_b = (<a id="positive">+${this.state.total_balance}</a>)
+      var total_b = (<a id="positive">+${this.CurrencyFormatted(this.state.total_balance)}</a>)
     } else {
-      var total_b = (<a id="negative">-${Math.abs(this.state.total_balance)}</a>)
+      var total_b = (<a id="negative">-${this.CurrencyFormatted(Math.abs(this.state.total_balance))}</a>)
     }
 
     if (this.props.selected === '#private_dashboard#') {
@@ -72,8 +72,8 @@ class DashboardPrivate extends React.Component {
           <div id="dashboard-balances">
             <div id="total-balances">
               <div id="total-balance">total balance: {total_b}</div>
-              <div id="you-owe">you owe: <a id="negative">${this.state.you_owe}</a></div>
-              <div id="you-are-owed">you are owed: <a id="positive">${this.state.you_are_owed}</a></div>
+              <div id="you-owe">you owe: <a id="negative">${this.CurrencyFormatted(this.state.you_owe)}</a></div>
+              <div id="you-are-owed">you are owed: <a id="positive">${this.CurrencyFormatted(this.state.you_are_owed)}</a></div>
             </div>
 
             <h2 id="category">
@@ -168,6 +168,7 @@ class DashboardPrivate extends React.Component {
   }
 
   updateTotalOwed() {
+    this.total_owed = 0;
     this.props.users.forEach((user, i) => {
 
       let billmems = (this.props.billmemberships
@@ -189,6 +190,7 @@ class DashboardPrivate extends React.Component {
   )};
 
   updateYouAreOwed() {
+    this.total_you_are_owed = 0;
     this.props.users.forEach((user, i) => {
 
       let billmems = (this.props.billmemberships
@@ -212,13 +214,13 @@ class DashboardPrivate extends React.Component {
   updateTotalBalance() {
     let total_owed = this.state.you_are_owed;
     let total_you_owe = this.state.you_owe;
-    this.setState({total_balance: (total_owed-total_you_owe)})
+    this.setState({total_balance: (total_owed - total_you_owe)})
   }
 
   setBalances() {
-    setTimeout(this.updateTotalOwed.bind(this), 1000);
-    setTimeout(this.updateYouAreOwed.bind(this), 1100);
-    setTimeout(this.updateTotalBalance.bind(this), 1200);
+    setInterval(this.updateTotalOwed.bind(this), 1000);
+    setInterval(this.updateYouAreOwed.bind(this), 1000);
+    setInterval(this.updateTotalBalance.bind(this), 1200);
 
   }
 
