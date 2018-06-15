@@ -8,12 +8,12 @@ You can access the working live demo here: <br>
 
 
 ## Table of Contents
-  * Features
-  * Technologies
-  * Pass Data Through Modals
-  * Multiple Demo Users
-  * Credits
-  * Future Functionalities
+  * [Features](https://github.com/AdoboFrenzy/Lootrify#features)
+  * [Technologies](https://github.com/AdoboFrenzy/Lootrify#technologies)
+  * [Pass Data Through Modals](https://github.com/AdoboFrenzy/Lootrify#pass-data-through-modals)
+  * [Multiple Demo Users](https://github.com/AdoboFrenzy/Lootrify#multiple-demo-users)
+  * [Credits](https://github.com/AdoboFrenzy/Lootrify#credits)
+  * [Future Functionalities](https://github.com/AdoboFrenzy/Lootrify#future-functionalities)
 
 
 ## Features
@@ -25,9 +25,9 @@ You can access the working live demo here: <br>
 
   * Once logged in, the user can:
 
-    * Adding others through an auto-complete friends form.
+    * Add others through an auto-complete friends form.
     * Create new bills with a friend. Each friend lists all bills associated between you and them.
-    * Clicking on an individual bill will open up a comment / edit form.
+    * Click on an individual bill which will open up a comment / edit form.
 
   ![](https://s6.postimg.cc/pwgcmo7kh/friend_show.png)
 
@@ -90,7 +90,7 @@ function Modal({modal, data, closeModal}) {
 
 // Container Files you want to pass data to
 const mapStateToProps = (state, ownProps) => {
-  debugger
+
   return ({
     targetBill: state.ui.data.bill, //passed data from modal actions
     targetUser: state.ui.data.user
