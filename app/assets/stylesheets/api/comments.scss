@@ -94,7 +94,7 @@
   width: 50px;
   height: 30px;
   color: white;
-  margin-right: 12px;
+  margin-right: 5px;
   text-align: center;
   vertical-align: middle;
   justify-content: center;
@@ -107,6 +107,11 @@
 
 .comments-form button:hover {
   cursor: pointer;
+}
+
+.comments-form #edit-button {
+  background-color: #5bc5a7;
+  margin-left: 5px;
 }
 
 .comment #name {

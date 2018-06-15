@@ -26,6 +26,14 @@ class Comments extends React.Component {
     setTimeout(this.setState({body: ''}), 500);
   }
 
+  handleEdit() {
+    if (this.props.targetBill.creator_id === this.props.currentUserId) {
+      alert('edit form here!');
+    } else {
+      alert('You must be the bill moderator to edit !');
+    }
+  }
+
   close() {
     this.props.closeModal();
   }
@@ -40,7 +48,7 @@ class Comments extends React.Component {
       <div className="comments-form">
 
         <header id="comments-title">
-          <i className="fas fa-comments"><div>Notes and Comments</div></i>
+          <i className="fas fa-comments"><div>Comments / Edit Bill</div></i>
           <a className="dismiss btn" onClick={this.close.bind(this)}>x</a>
         </header>
 
@@ -67,7 +75,8 @@ class Comments extends React.Component {
         <div id="text-and-submit">
           <textarea placeholder="Add a comment" onChange={this.handle('body')} value={this.state.body} />
 
-          <button onClick={ this.handleSubmit.bind(this) }>Post</button>
+          <button id="post-button" onClick={ this.handleSubmit.bind(this) }>Post</button>
+          <button id="edit-button" onClick={ this.handleEdit.bind(this) }>Edit</button>
         </div>
 
       </div>
