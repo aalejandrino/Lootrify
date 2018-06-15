@@ -14,7 +14,7 @@ class Api::BillsController < ApplicationController
 
   def create
     @bill = Bill.new(bill_params)
-    # debugger
+
     if @bill.save
       Billmembership.create(member_id: (current_user.id), bill_id: @bill.id)
       Billmembership.create(member_id: (params[:otherId].to_i), bill_id: @bill.id)

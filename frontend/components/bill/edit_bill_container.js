@@ -5,7 +5,7 @@ import { updateBill, createBillmembership, fetchBills } from '../../actions/bill
 import EditBill from './edit_bill';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
+
   return ({
     targetBill: state.ui.data.bill, //passed data from modal actions
     targetUser: state.ui.data.user

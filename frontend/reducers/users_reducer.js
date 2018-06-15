@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
-  // debugger
+
   switch (action.type) {
 
     case LOGOUT_CURRENT_USER:

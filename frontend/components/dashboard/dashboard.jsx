@@ -42,7 +42,7 @@ class Dashboard extends React.Component {
   selectFriend(user) {
     return (e) => {
       this.setState({selectedFriend: user});
-      // debugger
+
       this.props.closeModal();
     };
   }
@@ -51,8 +51,6 @@ class Dashboard extends React.Component {
     return (e) => {
       this.setState({selectedFriend: '#private_dashboard#'});
 
-      // window.location.reload()
-      // debugger
       this.props.closeModal();
     }
   }

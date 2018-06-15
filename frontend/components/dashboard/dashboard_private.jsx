@@ -194,7 +194,7 @@ class DashboardPrivate extends React.Component {
                         .filter(billmem => (billmem.member_id === this.props.currentUserId)));
 
       let bills = (billmems.map(billmem => this.props.bills[billmem.bill_id]));
-      // debugger
+
       bills.forEach((bill) => {
 
         if (bill.creator_id === user.id && user.id !== this.props.currentUserId) {
@@ -216,7 +216,7 @@ class DashboardPrivate extends React.Component {
                         .filter(billmem => (billmem.member_id === user.id)));
 
       let bills = (billmems.map(billmem => this.props.bills[billmem.bill_id]));
-      // debugger
+
       bills.forEach((bill) => {
 
         if (bill.creator_id === this.props.currentUserId && user.id === this.props.currentUserId) {

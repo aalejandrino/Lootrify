@@ -27,7 +27,7 @@ export const createFriendship = (friend) => dispatch => (
 );
 
 export const removeFriendship = (id, currentUserId, friendId) => dispatch => {
-  // debugger
+
   return (
     FriendAPIUtil.removeFriendship(id)
       .then(res => dispatch(removeFriend(id, currentUserId, friendId)))
