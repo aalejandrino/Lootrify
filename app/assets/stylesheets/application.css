@@ -158,6 +158,7 @@ h3 {
 }
 
 .btn-teal:hover {
+  cursor: pointer;
   border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
   background-color: #318970;
 }

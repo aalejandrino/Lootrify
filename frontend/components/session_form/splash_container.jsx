@@ -10,7 +10,14 @@ const DEMO = {
   3: 'Arya Stark',
   4: 'Oberyn Martell',
   5: 'Khal Drogo',
-  6: 'Sansa Stark'
+  6: 'Sansa Stark',
+  7: 'Margaery Tyrell',
+  8: 'Bran Stark',
+  9: 'Ramsay Bolton',
+  10: 'Jorah Mormont',
+  11: 'Samwell Tarly',
+  12: 'Tommen Baratheon',
+  13: 'Davos Seaworth'
 }
 
 const mapStateToProps = (state, ownProps) => ({

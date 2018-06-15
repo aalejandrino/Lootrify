@@ -26,6 +26,11 @@
 // ---------------------
 }
 
+
+#search-selectname:hover {
+  cursor: pointer;
+}
+
 .friends-list {
   position: absolute;
   z-index: 1100;
@@ -95,7 +100,8 @@
 
 #friend-form-inputs input {
   display: flex;
-  width: 100%;
+  width: 540px;
+  padding: 0px 10px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -104,8 +110,9 @@
 
 #friend-form-inputs textarea {
   display: flex;
-  width: 100%;
+  width: 540px;
   height: 54px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin: 0 0 10px 0;

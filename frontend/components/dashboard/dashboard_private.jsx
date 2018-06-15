@@ -224,9 +224,9 @@ class DashboardPrivate extends React.Component {
   }
 
   setBalances() {
-    this.update1 = setInterval(this.updateTotalOwed.bind(this), 2000);
-    this.update2 = setInterval(this.updateYouAreOwed.bind(this), 2000);
-    this.update3 = setInterval(this.updateTotalBalance.bind(this), 2100);
+    this.update1 = setInterval(this.updateTotalOwed.bind(this), 1000);
+    this.update2 = setInterval(this.updateYouAreOwed.bind(this), 1000);
+    this.update3 = setInterval(this.updateTotalBalance.bind(this), 1100);
 
   }
 

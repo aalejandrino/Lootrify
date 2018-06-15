@@ -81,8 +81,7 @@ class LoginSessionForm extends React.Component {
             </div>
 
             <h3>
-              Welcome to Lootrify, <br></br>
-              Please Login !
+              <a>Welcome, Please Login!</a>
             </h3>
             <br></br>
 

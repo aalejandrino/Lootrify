@@ -54,7 +54,7 @@ class SearchForm extends React.Component {
   selectName(friendId) {
 
     return (e) => {
-      let name = e.currentTarget.firstChild.data;
+      let name = e.target.firstChild.data;
 
       this.setState({search: name, friendId, showSearch: false});
 
@@ -65,7 +65,7 @@ class SearchForm extends React.Component {
     let results = this.props.users.map((user,i) => {
       if (this.state.search === user.user_name.slice(0, this.state.search.length) && this.state.showSearch) {
         return(
-          <li
+          <li id="search-selectname"
             key={i}
             onClick={this.selectName(user.id)}>
             {user.user_name} - ({user.email})
