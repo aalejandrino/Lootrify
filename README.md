@@ -18,7 +18,7 @@ You can access this app here: <br>
 ## Features
   * Splash Pages includes a a Sign Up / Sign In feature on the top right.
 
-  A new user can also use the Demo Login (featuring Game of Thrones characters) at the bottom to test out the application before signing up.
+   A new user can also use the Demo Login (featuring Game of Thrones characters) at the bottom to test out the application before signing up.
 
   ![](https://s6.postimg.cc/eip7y502p/Splash.png)
 
@@ -38,7 +38,7 @@ You can access this app here: <br>
 ## Pass Data through Modals
   * This application relies on modals, which somewhat made things complicated because I would lose access to some data.
 
-  One way to get around this was to pass those necessary data through the modal actions!
+   One way to get around this was to pass those necessary data through the modal actions!
 
 ```JS
 // Modal Actions File
@@ -97,7 +97,7 @@ const mapStateToProps = (state, ownProps) => {
 
 ## Multiple Demo Users
 
-Having one demo user is boring, why not add multiple favorite characters?
+  * Having one demo user is boring, why not add multiple favorite characters?
 
 ```JS
 const DEMO = {
