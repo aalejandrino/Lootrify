@@ -21,4 +21,16 @@ April 16, 2016 - App Academy Cohort
 
   A new user can also use the Demo Login (featuring Game of Thrones characters) at the bottom to test out the application before signing up.
 
-[](https://s6.postimg.cc/eip7y502p/Splash.png)
+  ![](https://s6.postimg.cc/eip7y502p/Splash.png)
+
+  * Once logged in, the user can start adding others through an auto-complete friends form.
+
+  ![](https://s6.postimg.cc/pwgcmo7kh/friend_show.png)
+
+  * Add new bills with a friend. Each friend lists all bills associated between you and them. Clicking on an individual bill will open up a comment / edit form.
+
+  ![](https://s6.postimg.cc/4zk4i6wqp/Add_bill.png)
+
+  * The Private Dashboard lists all bills associated with you. Clicking on one will direct you to the friend's bill page.
+
+  ![](https://s6.postimg.cc/4msqc11m9/dashboard.png)
