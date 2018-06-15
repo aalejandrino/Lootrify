@@ -12,10 +12,10 @@ const DashboardFriendItem = (props) => {
       }
     };
 
-    const openBillComments = (bill) => {
-      props.fetchBill(bill.id);
+    const openBillComments = (targetBill, targetUser) => {
+      props.fetchBill(targetBill.id);
 
-      props.openModal('comments', bill);
+      props.openModal('comments', { bill: targetBill, user: targetUser });
     };
 
     const deleteBill = (billId) => {
@@ -56,18 +56,18 @@ const DashboardFriendItem = (props) => {
                 if ((bm.member_id === props.user.id && ((props.bills)[bm.bill_id]).creator_id === props.currentUserId) || false) {
                   return (
                     <li key={i} className="friend-bill-item">
-                      <div id="bill-title-date" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
+                      <div id="bill-title-date" onClick={ () => openBillComments((props.bills)[bm.bill_id], props.user) }>
                         <div id="date">{((props.bills)[bm.bill_id]).date}</div>
                         <div id="list-icon"></div>
                         <div id="title">{((props.bills)[bm.bill_id]).title.slice(0,25)}</div>
                       </div>
 
-                      <div id="bill-amount" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
+                      <div id="bill-amount" onClick={ () => openBillComments((props.bills)[bm.bill_id], props.user) }>
                         <label>you paid</label>
                         <div id="total"><a>$</a>{((props.bills)[bm.bill_id]).total_bill}</div>
                       </div>
 
-                      <div id="bill-amount-2" onClick={ () => openBillComments((props.bills)[bm.bill_id]) }>
+                      <div id="bill-amount-2" onClick={ () => openBillComments((props.bills)[bm.bill_id], props.user) }>
                         <label>you lent {props.user.user_name.slice(0,20)}</label>
                         <div id="total-2"><a>$</a>{((props.bills)[bm.bill_id]).total_bill/2}</div>
                       </div>

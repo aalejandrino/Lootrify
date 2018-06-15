@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resources :friends, only: [:show, :index, :create, :destroy]
 
-    resources :bills, only: [:show, :index, :create, :edit, :destroy] do
+    resources :bills, only: [:show, :index, :create, :edit, :update, :destroy] do
       resources :comments, only: [:show, :create, :destroy, :index]
     end
     resources :billmemberships, only: [:create, :destroy]

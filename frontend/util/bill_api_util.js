@@ -34,3 +34,11 @@ export const removeBill = (id) => (
     url: `/api/bills/${id}`
   })
 );
+
+export const updateBill = (bill, id) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/bills/${id}`,
+    data: { bill }
+  })
+)

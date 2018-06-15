@@ -27,9 +27,39 @@ class Api::BillsController < ApplicationController
 
   end
 
+  def edit
+    @bill = Bill.find(params[:id])
+  end
+
+  def update
+    @bill = Bill.find(params[:id])
+
+    if @bill.update_attributes(bill_params)
+      @comments = @bill.comments
+
+      render :show
+    else
+      render json: @bill.errors.full_messages, status: 422
+    end
+  end
+
+  # def edit
+  #   @link = Link.find(params[:id])
+  # end
+  #
+  # def update
+  #   @link = current_user.links.find(params[:id])
+  #   if @link.update_attributes(link_params)
+  #     redirect_to link_url(@link)
+  #   else
+  #     flash.now[:errors] = @link.errors.full_messages
+  #     render :edit
+  #   end
+  # end
+
   def destroy
     @bill = Bill.find(params[:id])
-    
+
     @bill_memberships = Billmembership.all.select {|billmem| billmem.bill_id == @bill.id}
     @bill_memberships.each do |billmem|
       billmem.destroy

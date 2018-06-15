@@ -42,12 +42,17 @@ export const createBill = (bill, otherId) => dispatch => (
     .then(billRes => dispatch(receiveBill(billRes)))
 );
 
-export const createBillmembership = billmem => (
+export const createBillmembership = billmem => dispatch => (
   BillAPIUtil.createBillmembership(billmem)
-    .then(billmemRes => dispatch (receiveBillmembership(billmemRes)))
+    .then(billmemRes => dispatch(receiveBillmembership(billmemRes)))
 );
 
 export const removeBill = (id, billmemId, billmemId2) => dispatch => (
   BillAPIUtil.removeBill(id)
     .then(res => dispatch(rmvBill(id, billmemId, billmemId2)))
+);
+
+export const updateBill = (bill, id) => dispatch => (
+  BillAPIUtil.updateBill(bill, id)
+    .then(payload => dispatch(receiveBill(payload)))
 );

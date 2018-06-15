@@ -6,12 +6,7 @@ class Comments extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      body: '',
-      bill_id: props.targetBill.id,
-      author_id: props.currentUserId
-    }
-
+    this.state = props.form;
 
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -28,7 +23,10 @@ class Comments extends React.Component {
 
   handleEdit() {
     if (this.props.targetBill.creator_id === this.props.currentUserId) {
-      alert('edit form here!');
+
+          this.props.closeModal();
+          setTimeout(this.props.openModal('editBill', {bill: this.props.targetBill, user: this.props.targetUser}), 1000);
+
     } else {
       alert('You must be the bill moderator to edit !');
     }
