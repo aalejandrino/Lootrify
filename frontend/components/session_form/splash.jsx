@@ -24,7 +24,8 @@ class Splash extends React.Component {
     this.props.processForm(user).then(() => {
       this.props.closeModal();
 
-      this.props.history.push('/dashboard')
+      if (this.props.history.location.pathname !== '/dashboard') {this.props.history.push('/dashboard')} ;
+      // console.log(this.props.history);
     });
   }
 

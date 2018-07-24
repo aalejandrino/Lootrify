@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
 
     window.scrollTo(0, 0);
 
-    this.state = {selectedFriend: ''};
+    this.state = { selectedFriend: '#private_dashboard#'};
     let openModal = props.openModal;
     let closeModal = props.closeModal;
     let isOpen = props.isOpen;
