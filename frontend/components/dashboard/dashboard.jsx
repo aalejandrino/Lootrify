@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
   componentDidMount() {
 
     this.props.fetchFriendships().then(() => this.props.fetchBills()).then(() => {
-      this.setState({selectedFriend: ''});
+      this.setState({ selectedFriend: '#private_dashboard#'});
     })
   }
 
@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
 
     window.scrollTo(0, 0);
 
-    this.state = { selectedFriend: '#private_dashboard#'};
+    this.state = { selectedFriend: ''};
     let openModal = props.openModal;
     let closeModal = props.closeModal;
     let isOpen = props.isOpen;
