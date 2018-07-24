@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
+import { Router } from 'react-router';
 
 
 
@@ -12,6 +13,7 @@ const Greeting = (props) => {
 
   const handleClick = () => {
     props.clearErrors();
+    // console.log(props.history)
 
     if (isOpen) {
       closeModal()
@@ -30,12 +32,21 @@ const Greeting = (props) => {
 
   }
 
+  const handleSignup = () => {
+    if (isOpen) {
+      closeModal();
+    };
+
+    <Redirect from="/" to="/signup" />
+  }
+
   const sessionLinks = () => (
     <nav className="login-signup">
+      {/* <input className='login btn' type='submit' onClick={handleClick.bind(this)} value='Login' /> */}
       <Link to="/" className="login btn" onClick={handleClick.bind(this)}>Login</Link>
-      <div>or</div>
+      <div> or </div>
 
-
+      {/* <input className='signup btn' type='submit' onClick={handleSignup.bind(this)} value='Sign Up!' /> */}
       <Link to="/signup" className="signup btn" onClick={() => props.closeModal()}>Sign up!</Link>
     </nav>
   );

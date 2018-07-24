@@ -124,6 +124,19 @@ h3 {
   border-color: #FF883B;
   padding: 6px 10px 6px 10px;
   margin: 10px;
+  /* cursor: url(/signup) */
+}
+
+.signup.notallowed {
+  cursor: not-allowed;
+}
+
+.notallowed {
+  cursor: not-allowed;
+}
+
+#notallowed {
+  cursor: not-allowed;
 }
 
 .header-logout {

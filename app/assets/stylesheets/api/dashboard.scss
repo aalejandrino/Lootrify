@@ -160,6 +160,25 @@
 
 }
 
+#user-show-btns a {
+  background-color: #48be9d;
+  width: 80px;
+  height: 30px;
+  color: white;
+  margin-right: 12px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  // display: inline-block;
+  padding: 7.5px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  white-space: nowrap;
+
+}
+
 #user-show-btns > button:first-child {
   background-color: #ff652f;
 }

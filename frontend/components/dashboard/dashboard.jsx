@@ -87,19 +87,19 @@ class Dashboard extends React.Component {
                 <span></span>
                 Dashboard
               </li>
-              <li>
+              <li className="notallowed">
                 <i className="fa fa-flag" aria-hidden="true"></i>
-                Recent activity
+                Recent Activity
+              </li>
+              <li className="notallowed">
+                <i className="fa fa-list" aria-hidden="true"></i>
+                All Expenses
               </li>
             </div>
             <div id="leftSide-2">
-              <li>
-                <i className="fa fa-list" aria-hidden="true"></i>
-                All expenses
-              </li>
             </div>
             <div id="leftSide-3">
-              <li className="groups">
+              <li className="groups notallowed">
                 <div>GROUPS</div>
                 <div>
                   <i className="fa fa-plus" aria-hidden="true"></i>
@@ -107,7 +107,7 @@ class Dashboard extends React.Component {
                 </div>
               </li>
 
-              <div id="no-groups">
+              <div id="no-groups" className="notallowed">
                 You do not have any groups
                 <br></br>
                 yet. <i className="fa fa-question-circle" aria-hidden="true"></i>

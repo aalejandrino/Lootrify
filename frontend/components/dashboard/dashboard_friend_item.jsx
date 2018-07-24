@@ -44,7 +44,7 @@ const DashboardFriendItem = (props) => {
 
             <div id="user-show-btns">
               <button onClick={createBillBtn.bind(this)}>Add a Bill</button>
-              <button>Settle Up</button>
+              <a className="notallowed" id="notallowed" >Settle Up</a>
             </div>
 
           </div>
