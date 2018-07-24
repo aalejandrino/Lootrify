@@ -107,11 +107,10 @@
 .footer {
   position: relative;
   left: 0;
-  width: 100%;
+  width: 100.425%;
   justify-content: space-around;
   align-items: flex-start;
   right: 100px;
-  padding: 20px;
   background: #666;
   color: white;
   font-size: 24px;
@@ -127,10 +126,13 @@
 }
 
 .footer #footer-caption {
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
+  padding: 20px 0px 10px 10px;
+  width: 80%;
 }
 
 .footer #footer-aA {
   font-size: 16px;
-  padding-top: 10px;
+  padding: 10px 0px 20px 10px;
+  width: 80%;
 }
