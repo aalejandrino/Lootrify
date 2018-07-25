@@ -38,13 +38,12 @@ class SearchForm extends React.Component {
   }
 
   handleInput(e) {
+
     this.setState({search: e.currentTarget.value}, () => {
 
-    });
-
-    this.searchUsers(this.state.search);
-
-    setTimeout(this.setState({search:' '}), 100)
+      this.props.searchUsers(this.state.search);
+    })
+    
   };
 
   showSearch(e) {
